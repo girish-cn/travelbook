@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10,300 Kilometres of Becoming - Interactive Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Chart Container Rules as per requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Tailwind max-w-xl is approx 576px, explicit generic limit here */
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        /* Custom Scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5f5f4; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d6d3d1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a29e; 
+        }
+
+        /* Fade transition */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .active-tab {
+            border-bottom: 2px solid #ea580c; /* orange-600 */
+            color: #ea580c;
+            font-weight: 600;
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutrals (Sand/Stone) with Burnt Orange Accent -->
+    <!-- Application Structure Plan: 
+         1. Hero Section: Title and aggregate stats to set the scope.
+         2. Interactive Dashboard: Split view. Left side is the 'Journey Log' (timeline navigation). Right side is the 'Mindset Monitor' (Context + Charts).
+         3. Why: The report is a narrative of internal change. A linear text dump is boring. A dashboard allows the user to 'click through' the chapters and see the emotional data change, reinforcing the "Internal vs External" theme. 
+         4. Flow: User starts at Chapter 1. They read the summary, see the 'Confusion' heavy chart. They click Chapter 3, they see the 'Commitment' spike. 
+    -->
+    <!-- Visualization & Content Choices:
+         1. Line Chart (The Emotional Altimeter): Goal: Show the non-linear path of confidence. Interaction: Static overview but updates highlights. Justification: Shows trends over time perfectly.
+         2. Doughnut Chart (Headspace Composition): Goal: Show the mix of emotions at each stage. Interaction: Updates dynamically when a chapter is selected. Justification: Best for part-to-whole comparisons of abstract feelings.
+         3. Text Cards: Goal: Deliver the narrative payload. Interaction: Show/Hide based on selection.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans leading-relaxed selection:bg-orange-100 selection:text-orange-800">
+
+    <!-- App Container -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-screen flex flex-col">
+
+        <!-- Header / Hero -->
+        <header class="mb-10 text-center space-y-4">
+            <div class="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-bold tracking-widest uppercase">Travel Memoir</div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight">10,300 Kilometres of Becoming</h1>
+            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto">
+                52 Days • One Man • One Bike. <br>
+                <span class="text-sm text-stone-500 italic">Exploring the internal journey from confusion to clarity.</span>
+            </p>
+        </header>
+
+        <!-- Main Dashboard Layout -->
+        <main class="grid grid-cols-1 lg:grid-cols-12 gap-8 grow">
+            
+            <!-- Left Column: Navigation & Narrative (The Road) -->
+            <section class="lg:col-span-4 flex flex-col space-y-6">
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h2 class="text-lg font-bold text-stone-800 uppercase tracking-widest mb-6">Chapters</h2>
+
+                    <!-- Interactive Timeline Navigation -->
+                    <div class="space-y-4" id="chapter-nav">
+                        <!-- Buttons injected via JS -->
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Right Column: The Journal (The Mind) -->
+            <section class="lg:col-span-8 space-y-8 flex flex-col">
+                
+                <!-- Journal Entry Display -->
+                <div id="journal-box" class="bg-[#fdfbf7] p-8 md:p-12 rounded-2xl shadow-lg border border-stone-200 relative min-h-[500px] flex flex-col grow">
+                    <!-- Dynamic Content -->
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Key Realizations / Footer -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-bold text-stone-900 mb-6 text-center">Key Realizations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="realizations-grid">
+                <!-- Cards injected via JS -->
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Application Logic -->
+    <script>
+        // --- DATA STORE ---
+        // Parsing the qualitative report into structured data for the app.
+        
+        const appData = [
+            {
+                id: 1,
+                title: "Chapter 1: Leaving Without Knowing",
+                route: "Mysuru → Davangere",
+                date: "Dec 6th",
+                summary: "The journey begins with confusion, not courage. A forgotten license forces a return home, symbolizing a subconscious desire to quit.",
+                fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=1000" alt="Motorcycle packed for a trip" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Departure • Dec 6th</div>
+                    </div>
+                    <p class="mb-4">The journey did not begin with courage. It began with confusion.</p>
+                    <p class="mb-4">On 6th December, I packed my bags without clarity. There was no grand announcement, no dramatic farewell, no fixed return date. The idea of riding across India had been circling my mind, but it had no structure. It was more a feeling than a plan.</p>
+                    <p class="mb-4">I even started late. Some part of me was still undecided. As I rode out of Mysuru, I remember thinking, <em>I might come back by evening.</em> It didn’t feel like departure; it felt temporary.</p>
+                    <p class="mb-4">Twenty kilometres later, I realised I had forgotten my driving licence, RC, and PUC. I stopped the bike. Removed my helmet. Sat in silence. <em>Was this a sign? Or was I subconsciously looking for a reason to return?</em></p>
+                    <p class="mb-4">I turned back home, picked up the documents, and left again. But something had already been revealed—I wasn’t fully committed.</p>
+                    <p class="mb-4">The road to Davangere was familiar. I was heading there for a friend’s wedding—the only planned stop in an otherwise uncertain journey. Externally, it looked simple: a man riding to attend a marriage. Internally, it felt like standing at the edge of something unnamed.</p>
+                    <p class="mb-4"><em>Why am I doing this? What is the purpose? Am I escaping? Or searching?</em></p>
+                    <p class="mb-4">By evening, I reached Davangere. I unexpectedly met a group of friends I had known from a previous solo trek. They welcomed me warmly, gave me a place to stay, and took care of me without questions. In a day filled with doubt, their warmth felt like reassurance.</p>
+                    <p class="mb-4">The wedding was joyful. Laughter. Music. Celebration. But even while smiling, a quiet voice inside whispered: <em>You don’t have to continue.</em></p>
+                    <p>That night, returning close to 1 AM, I lay awake longer than usual. The journey had technically started. But emotionally, I was still at the beginning.</p>
+                `,
+                quote: "It didn’t feel like departure; it felt temporary.",
+                emotionalState: {
+                    confusion: 60,
+                    comfort: 10,
+                    fear: 20,
+                    hope: 10
+                },
+                commitmentLevel: 15, // Low commitment
+                keyLesson: "Departure ≠ Commitment",
+                color: "bg-gray-100"
+            },
+            {
+                id: 2,
+                title: "Chapter 2: The Safety of the Known",
+                route: "Davangere → Hubli",
+                date: "The Wedding",
+                summary: "Seeking the familiar. Riding to a friend's place in Hubli feels like extending a visit rather than an expedition. The temptation to stop is strong.",
+                fullText: `
+                    <p class="mb-4">The wedding ended beautifully. There was food, conversation, and the familiar comfort of community. For a moment, life felt simple. After meeting another college friend, I made a safe decision: I would ride to Hubli.</p>
+                    
+                    <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform rotate-2 z-10">
+                        <img src="https://images.unsplash.com/photo-1511216113906-8f56bb29d53f?auto=format&fit=crop&q=80&w=500" alt="Friends gathering" class="w-full h-auto grayscale sepia-[.30]" onerror="this.style.display='none'">
+                        <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">The warmth of community</figcaption>
+                    </figure>
+
+                    <p class="mb-4">Not because it was part of a master plan, but because a close friend lived there. Somewhere familiar. Somewhere grounding.</p>
+                    <p class="mb-4">The ride did not feel adventurous. It felt like extending a visit rather than beginning an expedition. When I reached Hubli, there was warmth again—home-cooked food, effortless conversations, the kind of silence that doesn’t need explaining.</p>
+                    <p class="mb-4 clear-none">And slowly, a thought grew stronger: <em>Why go further? I was comfortable. Why choose uncertainty?</em> That night, stopping the journey didn’t feel like failure. It felt practical.</p>
+                    <div class="clear-both"></div>
+                `,
+                quote: "I was not afraid of distance; I was afraid of commitment.",
+                emotionalState: {
+                    confusion: 20,
+                    comfort: 60,
+                    fear: 15,
+                    hope: 5
+                },
+                commitmentLevel: 25, // Still low, seeking safety
+                keyLesson: "Comfort is the enemy of the quest",
+                color: "bg-orange-50"
+            },
+            {
+                id: 3,
+                title: "Chapter 3: The Pause",
+                route: "Hubli (Stationary)",
+                date: "2 Days",
+                summary: "Stagnation leads to introspection. Two days of not moving forces a confrontation with the truth: it's not about the ride, it's about the promise.",
+                fullText: `
+                    <p class="mb-4">The next day, I did not start. The bike remained parked. The luggage stayed tied. It was a Tuesday. I remember that clearly. The day moved slowly.</p>
+                    
+                    <div class="my-10 relative px-4">
+                        <div class="absolute inset-0 bg-stone-900/10 mix-blend-multiply rounded-lg"></div>
+                        <img src="https://images.unsplash.com/photo-1499696956699-23136209a83d?auto=format&fit=crop&q=80&w=1000" alt="Parked motorcycle" class="w-full h-48 md:h-56 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.style.display='none'">
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center w-full">Stagnation.</div>
+                    </div>
+
+                    <p class="mb-4">I bought a new SIM card, ran small errands, and spent time quietly. Nothing extraordinary happened, but internally, everything shifted. When you stop moving physically, your thoughts move faster.</p>
+                    <p class="mb-4"><em>What am I proving? Do I really want this? Or did I romanticise the idea of a long ride?</em></p>
+                    <p class="mb-4">For two days in Hubli, I lived in between—not returning, not moving forward. I realised something uncomfortable: I was not afraid of distance; I was afraid of commitment.</p>
+                    <p class="mb-4">If I continued, this would no longer be a “short ride.” If I stopped, I would always wonder—<em>what if?</em></p>
+                    <p class="mb-4">Those two days were necessary. They removed excitement. They removed fantasy. What remained was honesty. By the end of the second day, something settled inside me. Not motivation, not adrenaline—just acceptance.</p>
+                    <p class="mb-4"><em>No rushing. No forcing. No ego. If I feel uncomfortable, I will return. If I feel steady, I will continue.</em></p>
+                    <p>That promise changed everything.</p>
+                `,
+                quote: "Those two days removed fantasy. What remained was honesty.",
+                emotionalState: {
+                    confusion: 10,
+                    comfort: 20,
+                    fear: 40,
+                    hope: 30
+                },
+                commitmentLevel: 50, // The turning point
+                keyLesson: "Acceptance over Adrenaline",
+                color: "bg-blue-50"
+            },
+            {
+                id: 4,
+                title: "Chapter 4: The First Real Step",
+                route: "Hubli → Vijayapura",
+                date: "Day 4",
+                summary: "The mental burden lifts. No longer trying to conquer distance, but living it. The journey truly begins not at the start line, but at the moment of belief.",
+                fullText: `
+                    <p class="mb-4">On the fourth morning, I started from Hubli toward Vijayapura. And something felt lighter. The doubts had softened. There was no pressure to prove anything, no urgency to reach a destination. I had no rigid plan, no timeline, no record to chase. Just the road and myself.</p>
+                    <p class="mb-4">That day, it stopped feeling like a ride. It started feeling like life. For the first time, I wasn’t trying to conquer distance; I was allowing the journey to unfold. This was not about covering kilometres; it was about living each one.</p>
+                    
+                    <div class="my-8 p-1.5 bg-stone-100 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded transform -rotate-1 mx-auto max-w-xl transition hover:rotate-0 duration-300">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1000" alt="Open road in India" class="w-full h-56 md:h-72 object-cover rounded border border-stone-200" onerror="this.style.display='none'">
+                    </div>
+
+                    <p class="mb-4">I did not know then that this would become 52 days. I did not know it would stretch to 10,300 kilometres. At that moment, I only knew one thing: I wanted to move forward.</p>
+                    <p class="mb-4">Somewhere in my heart, there was a quiet hope—maybe I would reach Varanasi. A place that had touched something deep within me during my previous visit. Varanasi was not a destination; it was a feeling. And perhaps I was riding toward that feeling.</p>
+                    <p>Looking back now, I realise: The journey did not begin when I left Mysuru. It began when I stopped doubting myself. That morning from Hubli to Vijayapura was not just another stretch of road. It was one of the biggest decisions of my life.</p>
+                `,
+                quote: "The journey began when I stopped doubting myself.",
+                emotionalState: {
+                    confusion: 0,
+                    comfort: 10,
+                    fear: 10,
+                    hope: 80
+                },
+                commitmentLevel: 95, // High commitment
+                keyLesson: "Clarity comes in motion",
+                color: "bg-green-50"
+            }
+        ];
+
+        // --- STATE MANAGEMENT ---
+        let currentIndex = 0;
+
+        // --- DOM ELEMENTS ---
+        const navContainer = document.getElementById('chapter-nav');
+        const journalBox = document.getElementById('journal-box');
+        const realizationsGrid = document.getElementById('realizations-grid');
+
+        // --- INITIALIZATION ---
+        function initApp() {
+            renderNavigation();
+            renderRealizations();
+            loadChapter(0); // Load first chapter
+        }
+
+        // --- RENDER FUNCTIONS ---
+
+        function renderNavigation() {
+            navContainer.innerHTML = '';
+            appData.forEach((chapter, index) => {
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-center group hover:shadow-md ${index === currentIndex ? 'border-orange-500 bg-orange-50 ring-1 ring-orange-500' : 'border-stone-200 bg-white hover:border-orange-300'}`;
+                btn.onclick = () => loadChapter(index);
+                
+                // Content of button
+                btn.innerHTML = `
+                    <div class="bg-stone-200 text-stone-600 font-bold w-8 h-8 rounded-full flex items-center justify-center mr-4 group-hover:bg-orange-200 group-hover:text-orange-800 transition-colors shrink-0">
+                        ${index + 1}
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-stone-800 group-hover:text-orange-900">${chapter.title}</h4>
+                        <div class="text-xs text-stone-500 flex items-center mt-1">
+                            <span class="mr-2">📍 ${chapter.route}</span>
+                        </div>
+                    </div>
+                `;
+                navContainer.appendChild(btn);
+            });
+        }
+
+        function renderRealizations() {
+            realizationsGrid.innerHTML = '';
+            appData.forEach(chapter => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-5 rounded-xl shadow-sm border border-stone-200 hover:shadow-md transition-shadow";
+                card.innerHTML = `
+                    <div class="text-orange-600 font-bold text-xs uppercase mb-2">Chapter ${chapter.id} Insight</div>
+                    <p class="text-stone-800 font-serif italic mb-3">"${chapter.keyLesson}"</p>
+                    <p class="text-xs text-stone-500">${chapter.quote}</p>
+                `;
+                realizationsGrid.appendChild(card);
+            });
+        }
+
+        function loadChapter(index) {
+            currentIndex = index;
+            const data = appData[index];
+
+            // 1. Update Navigation Styling
+            renderNavigation(); // Re-render to update active state classes
+
+            // 2. Update Journal Box
+            journalBox.innerHTML = `
+                <div class="fade-in grow flex flex-col">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-orange-600 rounded-l-2xl"></div>
+                    
+                    <div class="text-orange-700 text-xs font-bold tracking-widest uppercase mb-4">Chapter ${data.id} • ${data.date}</div>
+                    
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 leading-tight">${data.title}</h2>
+                    
+                    <div class="flex items-center space-x-4 text-sm font-sans text-stone-500 mb-8 pb-4 border-b border-stone-200">
+                        <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> ${data.route}</span>
+                    </div>
+                    
+                    <div class="prose prose-stone prose-lg max-w-none grow text-stone-700 leading-relaxed mb-6 font-serif text-lg">
+                        ${data.fullText}
+                    </div>
+
+                    <blockquote class="mt-8 border-l-4 border-orange-300 pl-6 py-2">
+                        <p class="text-stone-800 italic font-medium text-xl font-serif">"${data.quote}"</p>
+                    </blockquote>
+                </div>
+            `;
+        }
+
+        // Run Init
+        window.addEventListener('DOMContentLoaded', initApp);
+
+    </script>
+</body>
+</html>
