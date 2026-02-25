@@ -79,6 +79,13 @@
                 52 Days • One Man • One Bike. <br>
                 <span class="text-sm text-stone-500 italic">Exploring the internal journey from confusion to clarity.</span>
             </p>
+            
+            <!-- Global Audio Control Button -->
+            <div class="mt-6 pt-2">
+                <button id="global-audio-btn" onclick="toggleAudio()" class="inline-flex items-center px-5 py-2 text-sm rounded-full border border-stone-300 bg-white text-stone-600 hover:bg-stone-100 transition-colors shadow-sm mx-auto">
+                    <span class="mr-2">🎵</span> Play Soundtrack
+                </button>
+            </div>
         </header>
 
         <!-- Main Dashboard Layout -->
@@ -225,37 +232,264 @@
             },
             {
                 id: 4,
-                title: "Chapter 4: The First Real Step",
-                route: "Hubli → Vijayapura",
-                date: "Day 4",
-                summary: "The mental burden lifts. No longer trying to conquer distance, but living it. The journey truly begins not at the start line, but at the moment of belief.",
+                title: "Chapter 4: The Two Days That Looked Like Nothing",
+                route: "Hubli (Stationary)",
+                date: "Sun - Tue",
+                summary: "A pause that turns into a heavy negotiation with oneself. The choice to continue becomes a personal responsibility rather than a reaction to pressure.",
                 fullText: `
-                    <p class="mb-4">On the fourth morning, I started from Hubli toward Vijayapura. And something felt lighter. The doubts had softened. There was no pressure to prove anything, no urgency to reach a destination. I had no rigid plan, no timeline, no record to chase. Just the road and myself.</p>
-                    <p class="mb-4">That day, it stopped feeling like a ride. It started feeling like life. For the first time, I wasn’t trying to conquer distance; I was allowing the journey to unfold. This was not about covering kilometres; it was about living each one.</p>
+                    <p class="mb-4">Sunday evening, after the wedding, I reached my friend’s house in Hubli.</p>
+                    <p class="mb-4">It was supposed to be just a stop. Instead, it became a pause.</p>
+                    <p class="mb-4">Monday passed. Then Tuesday. I did not start.</p>
+                    <p class="mb-4">The bike remained parked outside, silent. My luggage stayed packed, untouched. Every morning I woke up with the same thought: <em>Should I continue?</em></p>
+                    <p class="mb-4">But I didn’t move. Outwardly, it looked like rest. Internally, it was negotiation.</p>
+                    
+                    <div class="my-10 relative px-4">
+                        <div class="absolute inset-0 bg-stone-900/20 mix-blend-multiply rounded-lg"></div>
+                        <img src="https://images.unsplash.com/photo-1508558936510-0af1e3cccbab?auto=format&fit=crop&q=80&w=1000" alt="Quiet contemplation" class="w-full h-48 md:h-56 object-cover rounded-lg shadow-inner grayscale" onerror="this.style.display='none'">
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center w-full">Negotiation.</div>
+                    </div>
+
+                    <p class="mb-4">There is a special kind of tension when you are not forced to decide. No one was asking me to continue. No one was stopping me either. The choice was entirely mine. And that is heavier than pressure.</p>
+                    <p class="mb-4">I questioned everything. <em>Was this trip necessary? Was I running away from routine? Was I over-romanticising a long ride?</em></p>
+                    <p class="mb-4">Comfort is powerful. My friend’s home was warm. The food was familiar. The conversations were easy. Life felt stable. And stability makes uncertainty look foolish.</p>
+                    <p class="mb-4">But somewhere inside, a small voice refused to quiet down. <em>If you stop now, will you regret it?</em></p>
+                    <p class="mb-4">Those two days were not about laziness. They were about honesty. The excitement of departure had faded. The fantasy of “52 days” did not exist yet. There was no big dream in my head. Just a simple decision waiting to be made.</p>
+                    <p class="mb-4">By Tuesday night, something shifted. Not dramatically. But clearly. I didn’t feel fear anymore. I felt responsibility toward my own choice.</p>
+                `,
+                quote: "There is a special kind of tension when you are not forced to decide.",
+                emotionalState: {
+                    confusion: 10,
+                    comfort: 20,
+                    fear: 30,
+                    hope: 40
+                },
+                commitmentLevel: 60,
+                keyLesson: "Responsibility over pressure",
+                color: "bg-stone-50"
+            },
+            {
+                id: 5,
+                title: "Chapter 5: Wednesday – The Real Departure",
+                route: "Hubli → Vijayapura",
+                date: "Wednesday",
+                summary: "The mental burden lifts. The true beginning of the journey starts not with excitement, but with calm acceptance and commitment.",
+                fullText: `
+                    <p class="mb-4">On Wednesday morning, I woke up early. This time, I did not debate.</p>
+                    <p class="mb-4">I packed properly. Checked everything twice. There was no forgotten document. No symbolic return.</p>
                     
                     <div class="my-8 p-1.5 bg-stone-100 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded transform -rotate-1 mx-auto max-w-xl transition hover:rotate-0 duration-300">
                         <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1000" alt="Open road in India" class="w-full h-56 md:h-72 object-cover rounded border border-stone-200" onerror="this.style.display='none'">
                     </div>
 
-                    <p class="mb-4">I did not know then that this would become 52 days. I did not know it would stretch to 10,300 kilometres. At that moment, I only knew one thing: I wanted to move forward.</p>
-                    <p class="mb-4">Somewhere in my heart, there was a quiet hope—maybe I would reach Varanasi. A place that had touched something deep within me during my previous visit. Varanasi was not a destination; it was a feeling. And perhaps I was riding toward that feeling.</p>
-                    <p>Looking back now, I realise: The journey did not begin when I left Mysuru. It began when I stopped doubting myself. That morning from Hubli to Vijayapura was not just another stretch of road. It was one of the biggest decisions of my life.</p>
+                    <p class="mb-4">When I started from Hubli toward Vijayapura, it felt different from the day I left Mysuru. That first departure had doubt. This one had acceptance.</p>
+                    <p class="mb-4">There was no rush. No dramatic music playing in my head. No feeling of conquering the world. Just calm.</p>
+                    <p class="mb-4">The early morning air was cold. Highways were empty. The engine sounded steady beneath me. For the first time, I wasn’t thinking about whether I would return. I was thinking about what the road might show me.</p>
+                    <p class="mb-4">Somewhere deep inside, I carried a quiet hope — maybe this journey would take me to Varanasi. That city had touched something inside me during my last visit. I didn’t know why, but it felt like unfinished business.</p>
+                    <p class="mb-4">But I wasn’t chasing it. I was allowing the road to unfold.</p>
+                    <p class="mb-4">That ride to Vijayapura was not dramatic. But it was powerful. Because it marked the true beginning.</p>
+                    <p class="mb-4">The journey did not start when I left Mysuru. It started when I left Hubli. That Wednesday morning was not just a continuation. It was a commitment.</p>
                 `,
-                quote: "The journey began when I stopped doubting myself.",
+                quote: "The journey did not start when I left Mysuru. It started when I left Hubli.",
                 emotionalState: {
                     confusion: 0,
                     comfort: 10,
                     fear: 10,
                     hope: 80
                 },
-                commitmentLevel: 95, // High commitment
-                keyLesson: "Clarity comes in motion",
+                commitmentLevel: 95, 
+                keyLesson: "Commitment over continuation",
                 color: "bg-green-50"
+            },
+            {
+                id: 6,
+                title: "Chapter 6: Flow Without Pressure",
+                route: "Vijayapura → Latur",
+                date: "Thursday",
+                summary: "Distance becomes effortless. Travel shifts from a spontaneous adventure to a grounded lifestyle of movement and routine.",
+                fullText: `
+                    <p class="mb-4">The next morning, I woke up at 4:30 AM.</p>
+                    <p class="mb-4">There was no resistance in getting ready. Packing felt natural. Starting early felt right. The highway toward Latur was smooth and peaceful. Cold wind. Empty stretches. Sunrise unfolding slowly behind me.</p>
+                    <p class="mb-4">I covered nearly 350 kilometres before 11 AM. Earlier in the journey, distance felt intimidating. Now, it felt effortless.</p>
+                    
+                    <div class="my-8 rounded-xl overflow-hidden shadow-md relative group max-w-2xl mx-auto">
+                        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=1000" alt="Peaceful sunrise on the highway" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Flow • Latur</div>
+                    </div>
+
+                    <p class="mb-4">When I reached Latur, I found a decent dormitory — nothing luxurious, nothing uncomfortable. Just enough.</p>
+                    <p class="mb-4">After settling in, I stepped out to buy small essentials — oats for breakfast, a pair of earphones, little practical things that make long travel sustainable. These purchases felt symbolic. This was no longer spontaneous. It was lifestyle.</p>
+                    <p class="mb-4">Afternoon work. Calls. Emails. Focus. And in the evening, another calm walk through the city.</p>
+                    <p class="mb-4">Latur was quieter than I expected. The streets carried a simplicity that felt grounding.</p>
+                    <p class="mb-4">As I walked, I realised something important: The question “Should I stop?” had completely disappeared.</p>
+                    <p class="mb-4">The journey wasn’t heavy anymore. It had blended into me.</p>
+                `,
+                quote: "The journey wasn’t heavy anymore. It had blended into me.",
+                emotionalState: {
+                    confusion: 0,
+                    comfort: 30,
+                    fear: 0,
+                    hope: 70
+                },
+                commitmentLevel: 100, 
+                keyLesson: "Travel becomes lifestyle",
+                color: "bg-teal-50"
+            },
+            {
+                id: 7,
+                title: "Chapter 7: A Stranger in Yavatmal",
+                route: "Latur → Yavatmal",
+                date: "Friday",
+                summary: "Finding familiarity in unexpected places. The realization that transformation isn't always loud; sometimes it's about building quiet endurance.",
+                fullText: `
+                    <p class="mb-4">The following morning, I left early again — this time toward Yavatmal.</p>
+                    <p class="mb-4">The ride was steady, uneventful, peaceful. But reaching Yavatmal tested my patience slightly. Finding a budget stay was not easy. I searched multiple places. Asked around. Checked prices.</p>
+                    <p class="mb-4">For a brief moment, irritation tried to surface. But this time, I didn’t overreact. Eventually, I found a simple room. Enough.</p>
+                    
+                    <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform rotate-1 z-10">
+                        <img src="https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&q=80&w=500" alt="Quiet street" class="w-full h-auto sepia-[.20]" onerror="this.style.display='none'">
+                        <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">Familiarity</figcaption>
+                    </figure>
+
+                    <p class="mb-4">After settling in, something unexpected happened. A man approached me after noticing my Karnataka number plate. He began speaking fluent Kannada in Maharashtra.</p>
+                    <p class="mb-4">I was surprised. He was originally from Gujarat, yet he spoke Kannada effortlessly. That small connection felt comforting — like finding familiarity in an unfamiliar place. We spoke for some time. Shared numbers. Laughed about how language connects strangers.</p>
+                    <p class="mb-4 clear-none">It was a small moment. But on a long solo journey, small human interactions carry weight.</p>
+                    <p class="mb-4">That afternoon, I worked. Washed my clothes. Organised my luggage. In the evening, I went for a quiet walk. Yavatmal was calm. Almost meditative.</p>
+                    <p class="mb-4">For three days now, there had been no dramatic incidents. No emotional breakdowns. No intense highs. Just balance.</p>
+                    <p class="mb-4">Work and travel. Movement and stillness. Solitude and occasional connection.</p>
+                    <p class="mb-4">And I understood something: Not every phase of transformation is loud. Some phases are about building endurance.</p>
+                    <p class="mb-4">These were not adventure days. They were foundation days.</p>
+                    <div class="clear-both"></div>
+                `,
+                quote: "Not every phase of transformation is loud. Some phases are about building endurance.",
+                emotionalState: {
+                    confusion: 0,
+                    comfort: 50,
+                    fear: 0,
+                    hope: 50
+                },
+                commitmentLevel: 100, 
+                keyLesson: "Building endurance in silence",
+                color: "bg-orange-50"
+            },
+            {
+                id: 8,
+                title: "Chapter 8: A Freedom Ride to Jabalpur",
+                route: "Yavatmal → Jabalpur",
+                date: "Dec 13th",
+                summary: "The ride becomes a partnership. The motorcycle is no longer just a machine, but a quiet companion sharing the journey.",
+                fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&q=80&w=1000" alt="Motorcycle companion" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Freedom • Jabalpur</div>
+                    </div>
+                    
+                    <p class="mb-4">I woke up at 6 AM. The room was quiet. My bike stood outside, slightly dusty from the previous days, but steady.</p>
+                    <p class="mb-4">Every morning before starting, I would look at him for a second — not as metal, but as a companion. I packed slowly. Checked the luggage straps. Touched the tank lightly. And we rolled out.</p>
+                    <p class="mb-4">That day was a freedom ride. No rush. No pressure to reach at a fixed time. Just open highway and a calm mind. As we crossed into Madhya Pradesh, the roads felt smoother, and so did my thoughts.</p>
+                    <p class="mb-4">I took multiple breaks. Sometimes to stretch. Sometimes to sip tea. Sometimes just to look back at the bike standing under the sun — as if we were both adjusting to the rhythm of long travel.</p>
+                    <p class="mb-4">Breakfast somewhere on the way. Lunch at a roadside dhaba near Jabalpur around 1 PM. The owner was friendly, curious about the number plate, asking how far I had come.</p>
+                    <p class="mb-4">By 2:30 PM, we reached Jabalpur. I checked into a dormitory. Parked him carefully. Covered him lightly. Bought fresh engine oil in the evening — a small gesture of respect.</p>
+                    <p class="mb-4">He had carried me across states without complaint. Maintenance wasn’t responsibility. It was gratitude.</p>
+                    <p class="mb-4">The evening was calm. A slow city walk. Local food. Mild winter air. That night, I slept knowing something had shifted.</p>
+                    <p class="mb-4">The ride wasn’t heavy anymore. It had become partnership.</p>
+                `,
+                quote: "Maintenance wasn’t responsibility. It was gratitude.",
+                emotionalState: {
+                    confusion: 0,
+                    comfort: 60,
+                    fear: 0,
+                    hope: 40
+                },
+                commitmentLevel: 100, 
+                keyLesson: "Travel shifts to partnership",
+                color: "bg-stone-100"
+            },
+            {
+                id: 9,
+                title: "Chapter 9: Warmth in Prayagraj",
+                route: "Jabalpur → Prayagraj",
+                date: "Dec 14th",
+                summary: "Strangers turn into friends, and friends treat you like family. A day marked by deep connections and genuine care.",
+                fullText: `
+                    <p class="mb-4">The morning began slowly. Before leaving, I had a conversation with a Kashmiri traveler in the hostel. Within minutes, we connected deeply — the kind of connection that only happens when two travelers share road stories.</p>
+                    <p class="mb-4">When I packed and came downstairs, the hostel staff wished me safe travels. It’s strange how strangers start caring about your journey.</p>
+                    
+                    <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform -rotate-2 z-10">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?auto=format&fit=crop&q=80&w=500" alt="Warmth and connection" class="w-full h-auto sepia-[.40]" onerror="this.style.display='none'">
+                        <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">Genuine Welcome</figcaption>
+                    </figure>
+
+                    <p class="mb-4">We left around 8 AM. The road to Prayagraj felt steady. Breakfast near Rewa. Long stretches of highway. Cold wind brushing against the visor.</p>
+                    <p class="mb-4">By 3:40 PM, we reached Prayagraj. As I entered my friend’s house compound, I felt something soften.</p>
+                    <p class="mb-4">His father welcomed me warmly. Not formally. Not politely. Genuinely. There is a difference.</p>
+                    <p class="mb-4 clear-none">He checked if I was comfortable, asked about the ride, looked at the bike with curiosity and respect. His mother ensured I ate well. Care came naturally from them.</p>
+                    <p class="mb-4">That evening, I went out to explore the city. The winter cold was sharp. I bought a few warm clothes. Walked through parks. Let the silence of Prayagraj settle inside me.</p>
+                    <p class="mb-4">When I returned home, dinner was shared. Conversations flowed.</p>
+                    <p class="mb-4">I wasn’t a traveler passing through. I was treated like family. And my bike rested outside quietly — as if he, too, had found temporary shelter.</p>
+                    <div class="clear-both"></div>
+                `,
+                quote: "I wasn’t a traveler passing through. I was treated like family.",
+                emotionalState: {
+                    confusion: 0,
+                    comfort: 80,
+                    fear: 0,
+                    hope: 20
+                },
+                commitmentLevel: 100, 
+                keyLesson: "Care comes naturally",
+                color: "bg-amber-50"
+            },
+            {
+                id: 10,
+                title: "Chapter 10: The Sangam Morning",
+                route: "Prayagraj (Stationary)",
+                date: "Dec 15th",
+                summary: "A freezing morning dip at the Sangam brings an overwhelming sense of presence. The journey transforms from reaching a destination to witnessing personal change.",
+                fullText: `
+                    <p class="mb-4">I woke up early. The cold was intense.</p>
+                    <p class="mb-4">My friend’s cousin took me to the Sangam. The air was misty, sacred, silent.</p>
+                    <p class="mb-4">Before stepping into the water, I looked back once — at my bike parked at a distance. He had brought me here. From Mysuru. Through doubt. Through hesitation. Through uncertainty. Now he stood quietly, as I stepped into something bigger than travel.</p>
+                    
+                    <div class="my-10 relative px-4">
+                        <div class="absolute inset-0 bg-stone-900/10 mix-blend-multiply rounded-lg"></div>
+                        <img src="https://images.unsplash.com/photo-1610045431635-f93d142125bb?auto=format&fit=crop&q=80&w=1000" alt="Misty river morning" class="w-full h-56 md:h-72 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.style.display='none'">
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center w-full">Presence.</div>
+                    </div>
+
+                    <p class="mb-4">The water was freezing. At least it should have been. But when I immersed myself, I didn’t feel the cold in the way I expected. Instead, I felt presence.</p>
+                    <p class="mb-4">Complete awareness. No overthinking. No future plans. No kilometre calculations. Just breath. Just water. Just existence.</p>
+                    <p class="mb-4">It shocked me. How could something so cold feel so alive?</p>
+                    <p class="mb-4">After the dip, we visited a temple. Walked through old streets. Ate authentic local food — dahi jalebi, kachori — flavours deeply rooted in the city’s culture.</p>
+                    <p class="mb-4">Back home, I worked for a while. In the evening, knowing I would leave the next day, my friend’s father took me on a city ride. He showed me the old city, the local markets, the bazaars — not as tourist attractions, but as memories. He wanted me to see <em>his</em> Prayagraj.</p>
+                    <p class="mb-4">That gesture stayed with me.</p>
+                    <p class="mb-4">When I returned and parked my bike for the night, I felt gratitude. For the road. For the people. For the machine that carried me.</p>
+                    <p class="mb-4">This journey was no longer about reaching Varanasi someday. It was about living each city fully. And that night, as I lay down to sleep, I realised:</p>
+                    <p class="mb-4">He was not just taking me places. He was witnessing me change.</p>
+                `,
+                quote: "He was not just taking me places. He was witnessing me change.",
+                emotionalState: {
+                    confusion: 0,
+                    comfort: 40,
+                    fear: 0,
+                    hope: 60
+                },
+                commitmentLevel: 100, 
+                keyLesson: "Complete awareness in the present",
+                color: "bg-indigo-50"
             }
         ];
 
         // --- STATE MANAGEMENT ---
         let currentIndex = 0;
+        let isAudioPlaying = false;
+        
+        // Create the background audio player globally using a single music file
+        // Make sure to place "background-music.mp3" in the same folder as this HTML file!
+        const audioPlayer = new Audio('background-music.mp3');
+        audioPlayer.loop = true;
+        audioPlayer.volume = 0.15; // Keep it soft so it acts as background ambience
 
         // --- DOM ELEMENTS ---
         const navContainer = document.getElementById('chapter-nav');
@@ -324,8 +558,12 @@
                     
                     <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 leading-tight">${data.title}</h2>
                     
-                    <div class="flex items-center space-x-4 text-sm font-sans text-stone-500 mb-8 pb-4 border-b border-stone-200">
+                    <div class="flex items-center justify-between text-sm font-sans text-stone-500 mb-8 pb-4 border-b border-stone-200">
                         <span class="flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> ${data.route}</span>
+                        
+                        <button id="audio-toggle-btn" onclick="toggleAudio()" class="flex items-center px-3 py-1 text-xs rounded-full border border-stone-300 hover:bg-stone-100 transition-colors ml-auto">
+                            <span class="mr-2">🎵</span> Play Score
+                        </button>
                     </div>
                     
                     <div class="prose prose-stone prose-lg max-w-none grow text-stone-700 leading-relaxed mb-6 font-serif text-lg">
@@ -337,6 +575,48 @@
                     </blockquote>
                 </div>
             `;
+            
+            // Re-sync UI button state (the track no longer restarts when clicking chapters)
+            updateAudioUI();
+        }
+
+        // --- AUDIO FUNCTIONS ---
+        function toggleAudio() {
+            if (isAudioPlaying) {
+                audioPlayer.pause();
+                isAudioPlaying = false;
+            } else {
+                audioPlayer.play().catch(e => {
+                    console.log("Audio playback blocked:", e);
+                });
+                isAudioPlaying = true;
+            }
+            updateAudioUI();
+        }
+
+        function updateAudioUI() {
+            const btn = document.getElementById('audio-toggle-btn');
+            const globalBtn = document.getElementById('global-audio-btn');
+            
+            if (isAudioPlaying) {
+                if (btn) {
+                    btn.innerHTML = '<span class="mr-2">⏸</span> Pause Score';
+                    btn.className = 'flex items-center px-3 py-1 text-xs font-bold rounded-full border border-orange-400 bg-orange-100 text-orange-800 transition-colors ml-auto shadow-sm';
+                }
+                if (globalBtn) {
+                    globalBtn.innerHTML = '<span class="mr-2">⏸</span> Pause Soundtrack';
+                    globalBtn.className = 'inline-flex items-center px-5 py-2 text-sm font-bold rounded-full border border-orange-400 bg-orange-100 text-orange-800 transition-colors shadow-sm mx-auto';
+                }
+            } else {
+                if (btn) {
+                    btn.innerHTML = '<span class="mr-2">🎵</span> Play Score';
+                    btn.className = 'flex items-center px-3 py-1 text-xs rounded-full border border-stone-300 bg-white text-stone-600 hover:bg-stone-100 transition-colors ml-auto';
+                }
+                if (globalBtn) {
+                    globalBtn.innerHTML = '<span class="mr-2">🎵</span> Play Soundtrack';
+                    globalBtn.className = 'inline-flex items-center px-5 py-2 text-sm rounded-full border border-stone-300 bg-white text-stone-600 hover:bg-stone-100 transition-colors shadow-sm mx-auto';
+                }
+            }
         }
 
         // Run Init
