@@ -29,11 +29,19 @@
         <header class="mb-10 text-center space-y-4">
             <div class="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-bold tracking-widest uppercase">Travel Memoir</div>
             <h1 class="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight">10,300 Kilometres of Becoming</h1>
-            <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto">
-                52 Days • One Man • One Bike. <br>
-                <span class="text-sm text-stone-500 italic">Exploring the internal journey from confusion to clarity.</span>
+            
+            <!-- Signature Line -->
+            <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm text-orange-700 uppercase tracking-widest font-bold">
+                <span>52 Days</span> &bull; <span>10,300 Kilometres</span> &bull; <span>One Man</span> &bull; <span>One Bike</span>
+            </div>
+            <p class="text-stone-500 italic mt-1 text-sm font-serif">And a road that quietly changed everything.</p>
+            
+            <!-- Opening Quote -->
+            <p class="text-lg md:text-xl text-stone-700 max-w-3xl mx-auto font-serif italic mt-8 border-l-4 border-orange-300 pl-6 py-2 text-left">
+                “Some journeys are not meant to take you somewhere new. They are meant to introduce you to the person you were always meant to become.”
             </p>
-            <div class="mt-6 pt-2">
+
+            <div class="mt-8 pt-4">
                 <button id="global-audio-btn" onclick="toggleAudio()" class="inline-flex items-center px-5 py-2 text-sm rounded-full border border-stone-300 bg-white text-stone-600 hover:bg-stone-100 transition-colors shadow-sm mx-auto">
                     <span class="mr-2">🎵</span> Play Soundtrack
                 </button>
@@ -56,33 +64,82 @@
                 </div>
             </section>
         </main>
+
+        <!-- The Wisdom of the Road (Global Quotes) -->
+        <section class="mt-20 border-t border-stone-200 pt-16 pb-12">
+            <h2 class="text-3xl font-serif font-bold text-stone-900 mb-12 text-center">Reflections from the Road</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 flex flex-col justify-center text-center group hover:shadow-md transition-all">
+                    <span class="text-4xl text-orange-300 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-stone-700 font-serif italic text-lg leading-relaxed">The hardest kilometre of every journey is the one where you decide not to turn back.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 flex flex-col justify-center text-center group hover:shadow-md transition-all">
+                    <span class="text-4xl text-orange-300 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-stone-700 font-serif italic text-lg leading-relaxed">The road does not promise comfort. It promises stories.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 flex flex-col justify-center text-center group hover:shadow-md transition-all">
+                    <span class="text-4xl text-orange-300 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-stone-700 font-serif italic text-lg leading-relaxed">When you travel alone long enough, the silence stops feeling empty and starts feeling like home.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 flex flex-col justify-center text-center group hover:shadow-md transition-all">
+                    <span class="text-4xl text-orange-300 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-stone-700 font-serif italic text-lg leading-relaxed">It was never just a machine. It was the silent companion that carried my doubts, my courage, and every mile of my becoming.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 flex flex-col justify-center text-center group hover:shadow-md transition-all">
+                    <span class="text-4xl text-orange-300 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-stone-700 font-serif italic text-lg leading-relaxed">Strangers on the road often become the kindest chapters of a journey.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 flex flex-col justify-center text-center group hover:shadow-md transition-all">
+                    <span class="text-4xl text-orange-300 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-stone-700 font-serif italic text-lg leading-relaxed">Fear walked beside me on many roads. But it never sat in the rider’s seat.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 flex flex-col justify-center text-center group hover:shadow-md transition-all">
+                    <span class="text-4xl text-orange-300 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-stone-700 font-serif italic text-lg leading-relaxed">The longer I travelled, the lighter my luggage became. And somewhere along the road, my mind became lighter too.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 flex flex-col justify-center text-center group hover:shadow-md transition-all">
+                    <span class="text-4xl text-orange-300 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-stone-700 font-serif italic text-lg leading-relaxed">I did not fall in love with the destination. I fell in love with the road that kept changing me.</p>
+                </div>
+                <div class="bg-orange-50 p-8 rounded-2xl shadow-sm border border-orange-100 flex flex-col justify-center text-center group hover:shadow-md transition-all md:col-span-2 lg:col-span-3">
+                    <span class="text-4xl text-orange-400 mb-4 block font-serif leading-none">"</span>
+                    <p class="text-orange-900 font-serif italic text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto">10,300 kilometres later, I did not return with answers. I returned with a quieter heart.</p>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <script>
         const appData = [
             {
                 id: 1,
-                title: "Chapter 1: Leaving Without Knowing",
+                title: "Chapter 1: Before the Road Began",
                 route: "Mysuru → Davangere",
                 date: "Dec 6th",
-                quote: "It didn’t feel like departure. It felt temporary.",
-                keyLesson: "Departure ≠ Commitment",
+                quote: "Long journeys rarely begin on the road. They begin quietly — inside the mind.",
+                keyLesson: "The journey begins before the departure",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=1000" alt="Motorcycle packed for a trip" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                        <img src="images/chapter-1.jpg" alt="Departure" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Departure</div>
                     </div>
-                    <p class="mb-4">The journey did not begin with courage. It began with confusion.</p>
-                    <p class="mb-4">On 6th December, I packed my bags without clarity. There was no grand announcement, no dramatic farewell, no fixed return date. The idea of riding across India had been circling my mind, but it had no structure. It was more a feeling than a plan.</p>
-                    <p class="mb-4">I even started late. Some part of me was still undecided. As I rode out of Mysuru, I remember thinking, <em>I might come back by evening.</em> It didn’t feel like departure. It felt temporary.</p>
-                    <p class="mb-4">Twenty kilometres later, I realised I had forgotten my driving licence, RC, and PUC. I stopped the bike. Removed my helmet. Sat in silence. <em>Was this a sign? Or was I subconsciously looking for a reason to return?</em></p>
-                    <p class="mb-4">I turned back home. Picked up the documents. And left again. But something had already been revealed — I wasn’t fully committed.</p>
-                    <p class="mb-4">The road to Davangere was familiar. I was heading there for a friend’s wedding — the only planned stop in an otherwise uncertain journey. Externally, it looked simple: a man riding to attend a marriage. Internally, it felt like standing at the edge of something unnamed.</p>
-                    <p class="mb-4"><em>Why am I doing this? What is the purpose? Am I escaping? Or searching?</em></p>
-                    <p class="mb-4">By evening, I reached Davangere. I unexpectedly met a group of friends I had known from a previous solo trek. They welcomed me warmly, gave me a place to stay, and took care of me without questions. In a day filled with doubt, their warmth felt like reassurance.</p>
-                    <p class="mb-4">The wedding was joyful. Laughter. Music. Celebration. But even while smiling, a quiet voice inside whispered: <em>You don’t have to continue.</em></p>
-                    <p>That night, returning close to 1 AM, I lay awake longer than usual. The journey had technically started. But emotionally, I was still at the beginning.</p>
+                    <p class="mb-4">Long journeys rarely begin on the road. They begin quietly — inside the mind.</p>
+                    <p class="mb-4">For months before December, the idea of travelling had been circling somewhere within me. It wasn’t a clear plan. There was no map pinned on the wall, no detailed itinerary, no fixed dates. It was just a feeling.</p>
+                    <p class="mb-4">Sometimes while working, sometimes during quiet evenings, sometimes while looking at my bike parked outside — a thought would appear: <em>What if I just start riding?</em> Not for a weekend trip. Not for a few hundred kilometres. But for something longer. Something uncertain.</p>
+                    <p class="mb-4">Still, the thought remained only a thought. Life continued as usual. Work, routine, responsibilities — everything moved in its normal rhythm.</p>
+                    <p class="mb-4">Until 6th December. That morning I packed my bags. Not with excitement. Not with heroic determination. With confusion.</p>
+                    <p class="mb-4">There was no grand announcement, no dramatic farewell, no clear promise to myself that I would ride across the country. Even while packing, my mind kept asking simple questions: <em>Why am I doing this? Is this even necessary? Maybe I will ride for a day and come back.</em></p>
+                    <p class="mb-4">When I finally started the bike and rode out of Mysuru, it didn’t feel like the beginning of a great adventure. It felt temporary. Almost like a test.</p>
+                    <p class="mb-4">Twenty kilometres later, the first pause happened. I realised something important — I had forgotten my driving licence, RC, and PUC documents.</p>
+                    <p class="mb-4">I stopped the bike by the roadside. Removed my helmet. And just sat there for a moment. The road was quiet. Inside my mind, another thought appeared: <em>Maybe this is a sign. Was I meant to return? Or was I subconsciously looking for an excuse to turn back?</em></p>
+                    <p class="mb-4">After a few minutes, I turned the bike around and rode back home. I picked up the documents, repacked everything, and started again. But that moment had already revealed something. I wasn’t fully committed yet.</p>
+                    <p class="mb-4">The road ahead was familiar. My first destination was Davangere, where a friend’s wedding was taking place. Externally, it looked simple — a man riding to attend a marriage. Internally, it felt different. It felt like I was standing at the edge of something undefined.</p>
+                    <p class="mb-4">The questions kept returning while riding. <em>Why am I doing this? What am I looking for? Am I escaping something? Or searching for something?</em></p>
+                    <p class="mb-4">By evening, I reached Davangere. Unexpectedly, I met a group of friends there — people I had earlier met during a solo trekking trip. They welcomed me warmly, offered me a place to stay, and took care of me without asking many questions. On a day filled with doubt, their warmth felt reassuring.</p>
+                    <p class="mb-4">The wedding was joyful. Music, laughter, celebration — everything a wedding should be. But even while smiling and talking with friends, a quiet voice inside continued whispering: <em>You don’t have to continue.</em></p>
+                    <p>That night, after returning close to 1 AM, I lay awake longer than usual. Technically, the journey had already begun. But emotionally… I was still at the starting line.</p>
                 `
             },
             {
@@ -94,11 +151,18 @@
                 keyLesson: "Comfort is the enemy of the quest",
                 fullText: `
                     <p class="mb-4">The wedding ended beautifully. There was food, conversation, and the familiar comfort of community. For a moment, life felt simple. After meeting another college friend, I made a safe decision. I would ride to Hubli.</p>
+                    
+                    <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform rotate-2 z-10">
+                        <img src="images/chapter-2.jpg" alt="Friends gathering" class="w-full h-auto grayscale sepia-[.30]" onerror="this.parentElement.style.display='none'">
+                        <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">The warmth of community</figcaption>
+                    </figure>
+
                     <p class="mb-4">Not because it was part of a master plan. But because a close friend lived there. Somewhere familiar. Somewhere grounding.</p>
                     <p class="mb-4">The ride did not feel adventurous. It felt like extending a visit rather than beginning an expedition.</p>
                     <p class="mb-4">When I reached Hubli, there was warmth again — home-cooked food, effortless conversations, the kind of silence that doesn’t need explaining.</p>
-                    <p class="mb-4">And slowly, a thought grew stronger: <em>Why go further? I was comfortable. Why choose uncertainty?</em></p>
+                    <p class="mb-4 clear-none">And slowly, a thought grew stronger: <em>Why go further? I was comfortable. Why choose uncertainty?</em></p>
                     <p>That night, stopping the journey didn’t feel like failure. It felt practical.</p>
+                    <div class="clear-both"></div>
                 `
             },
             {
@@ -112,11 +176,13 @@
                     <p class="mb-4">The next day, I did not start. The bike remained parked. The luggage stayed tied. But I stayed. It was a Tuesday. I remember that clearly. The day moved slowly.</p>
                     <p class="mb-4">I bought a new SIM card. Ran small errands. Spent time quietly. Nothing extraordinary happened. But internally, everything shifted. When you stop moving physically, your thoughts move faster.</p>
                     <p class="mb-4"><em>What am I proving? Do I really want this? Or did I romanticise the idea of a long ride?</em></p>
+                    
                     <div class="my-10 relative px-4">
                         <div class="absolute inset-0 bg-stone-900/10 mix-blend-multiply rounded-lg"></div>
-                        <img src="https://images.unsplash.com/photo-1499696956699-23136209a83d?auto=format&fit=crop&q=80&w=1000" alt="Parked motorcycle" class="w-full h-48 md:h-56 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.style.display='none'">
+                        <img src="images/chapter-3.jpg" alt="Parked motorcycle" class="w-full h-48 md:h-56 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.parentElement.style.display='none'">
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center w-full">The Pause.</div>
                     </div>
+
                     <p class="mb-4">For two days in Hubli, I lived in between — not returning, not moving forward. I realised something uncomfortable: I was not afraid of distance. I was afraid of commitment.</p>
                     <p class="mb-4">If I continued, this would no longer be a “short ride.” If I stopped, I would always wonder — <em>what if?</em></p>
                     <p class="mb-4">Those two days were necessary. They removed excitement. They removed fantasy. What remained was honesty. By the end of the second day, something settled inside me. Not motivation. Not adrenaline. Just acceptance.</p>
@@ -132,6 +198,11 @@
                 quote: "There is a special kind of tension when you are not forced to decide.",
                 keyLesson: "Responsibility toward one's own choice",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-4.jpg" alt="Contemplation" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Contemplation</div>
+                    </div>
                     <p class="mb-4">Sunday evening, after the wedding, I reached my friend’s house in Hubli. It was supposed to be just a stop. Instead, it became a pause.</p>
                     <p class="mb-4">Monday passed. Then Tuesday. I did not start. The bike remained parked outside, silent. My luggage stayed packed, untouched. Every morning I woke up with the same thought: <em>Should I continue?</em></p>
                     <p class="mb-4">But I didn’t move. Outwardly, it looked like rest. Internally, it was negotiation.</p>
@@ -155,9 +226,11 @@
                     <p class="mb-4">I packed properly. Checked everything twice. There was no forgotten document. No symbolic return.</p>
                     <p class="mb-4">When I started from Hubli toward Vijayapura, it felt different from the day I left Mysuru. That first departure had doubt. This one had acceptance.</p>
                     <p class="mb-4">There was no rush. No dramatic music playing in my head. No feeling of conquering the world. Just calm. The early morning air was cold. Highways were empty. The engine sounded steady beneath me.</p>
+                    
                     <div class="my-8 p-1.5 bg-stone-100 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded transform -rotate-1 mx-auto max-w-xl transition hover:rotate-0 duration-300">
-                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1000" alt="Open road in India" class="w-full h-56 md:h-72 object-cover rounded border border-stone-200" onerror="this.style.display='none'">
+                        <img src="images/chapter-5.jpg" alt="Open road in India" class="w-full h-56 md:h-72 object-cover rounded border border-stone-200" onerror="this.parentElement.style.display='none'">
                     </div>
+
                     <p class="mb-4">For the first time, I wasn’t thinking about whether I would return. I was thinking about what the road might show me.</p>
                     <p class="mb-4">Somewhere deep inside, I carried a quiet hope — maybe this journey would take me to Varanasi. That city had touched something inside me during my last visit. I didn’t know why, but it felt like unfinished business. But I wasn’t chasing it. I was allowing the road to unfold.</p>
                     <p class="mb-4">That ride to Vijayapura was not dramatic. But it was powerful. Because it marked the true beginning.</p>
@@ -172,6 +245,11 @@
                 quote: "The journey wasn’t heavy anymore. It had blended into me.",
                 keyLesson: "Travel becomes lifestyle",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-6.jpg" alt="Flow" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Flow</div>
+                    </div>
                     <p class="mb-4">The next morning, I woke up at 4:30 AM.</p>
                     <p class="mb-4">There was no resistance in getting ready. Packing felt natural. Starting early felt right. The highway toward Latur was smooth and peaceful. Cold wind. Empty stretches. Sunrise unfolding slowly behind me.</p>
                     <p class="mb-4">I covered nearly 350 kilometres before 11 AM. Earlier in the journey, distance felt intimidating. Now, it felt effortless.</p>
@@ -192,11 +270,18 @@
                     <p class="mb-4">The following morning, I left early again — this time toward Yavatmal.</p>
                     <p class="mb-4">The ride was steady, uneventful, peaceful. But reaching Yavatmal tested my patience slightly. Finding a budget stay was not easy. I searched multiple places. Asked around. Checked prices.</p>
                     <p class="mb-4">For a brief moment, irritation tried to surface. But this time, I didn’t overreact. Eventually, I found a simple room. Enough.</p>
+                    
+                    <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform rotate-1 z-10">
+                        <img src="images/chapter-7.jpg" alt="Quiet street" class="w-full h-auto sepia-[.20]" onerror="this.parentElement.style.display='none'">
+                        <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">Familiarity</figcaption>
+                    </figure>
+
                     <p class="mb-4">After settling in, something unexpected happened. A man approached me after noticing my Karnataka number plate. He began speaking fluent Kannada in Maharashtra. I was surprised. He was originally from Gujarat, yet he spoke Kannada effortlessly. That small connection felt comforting — like finding familiarity in an unfamiliar place. We spoke for some time. Shared numbers. Laughed about how language connects strangers.</p>
-                    <p class="mb-4">It was a small moment. But on a long solo journey, small human interactions carry weight.</p>
+                    <p class="mb-4 clear-none">It was a small moment. But on a long solo journey, small human interactions carry weight.</p>
                     <p class="mb-4">That afternoon, I worked. Washed my clothes. Organised my luggage. In the evening, I went for a quiet walk. Yavatmal was calm. Almost meditative.</p>
                     <p class="mb-4">For three days now, there had been no dramatic incidents. No emotional breakdowns. No intense highs. Just balance. Work and travel. Movement and stillness. Solitude and occasional connection.</p>
                     <p>And I understood something: Not every phase of transformation is loud. Some phases are about building endurance. These were not adventure days. They were foundation days.</p>
+                    <div class="clear-both"></div>
                 `
             },
             {
@@ -208,7 +293,7 @@
                 keyLesson: "The machine becomes a partner",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&q=80&w=1000" alt="Motorcycle companion" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                        <img src="images/chapter-8.jpg" alt="Motorcycle companion" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Freedom</div>
                     </div>
@@ -230,12 +315,19 @@
                 keyLesson: "Connection over distance",
                 fullText: `
                     <p class="mb-4">The morning began slowly. Before leaving, I had a conversation with a Kashmiri traveler in the hostel. Within minutes, we connected deeply — the kind of connection that only happens when two travelers share road stories.</p>
+                    
+                    <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform -rotate-2 z-10">
+                        <img src="images/chapter-9.jpg" alt="Warmth and connection" class="w-full h-auto sepia-[.40]" onerror="this.parentElement.style.display='none'">
+                        <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">Genuine Welcome</figcaption>
+                    </figure>
+
                     <p class="mb-4">When I packed and came downstairs, the hostel staff wished me safe travels. It’s strange how strangers start caring about your journey.</p>
                     <p class="mb-4">We left around 8 AM. The road to Prayagraj felt steady. Breakfast near Rewa. Long stretches of highway. Cold wind brushing against the visor. By 3:40 PM, we reached Prayagraj.</p>
                     <p class="mb-4">As I entered my friend’s house compound, I felt something soften. His father welcomed me warmly. Not formally. Not politely. Genuinely. There is a difference.</p>
-                    <p class="mb-4">He checked if I was comfortable, asked about the ride, looked at the bike with curiosity and respect. His mother ensured I ate well. Care came naturally from them.</p>
+                    <p class="mb-4 clear-none">He checked if I was comfortable, asked about the ride, looked at the bike with curiosity and respect. His mother ensured I ate well. Care came naturally from them.</p>
                     <p class="mb-4">That evening, I went out to explore the city. The winter cold was sharp. I bought a few warm clothes. Walked through parks. Let the silence of Prayagraj settle inside me.</p>
                     <p>When I returned home, dinner was shared. Conversations flowed. I wasn’t a traveler passing through. I was treated like family. And my bike rested outside quietly — as if he, too, had found temporary shelter.</p>
+                    <div class="clear-both"></div>
                 `
             },
             {
@@ -248,6 +340,13 @@
                 fullText: `
                     <p class="mb-4">I woke up early. The cold was intense. My friend’s cousin took me to the Sangam. The air was misty, sacred, silent.</p>
                     <p class="mb-4">Before stepping into the water, I looked back once — at my bike parked at a distance. He had brought me here. From Mysuru. Through doubt. Through hesitation. Through uncertainty. Now he stood quietly, as I stepped into something bigger than travel.</p>
+                    
+                    <div class="my-10 relative px-4">
+                        <div class="absolute inset-0 bg-stone-900/10 mix-blend-multiply rounded-lg"></div>
+                        <img src="images/chapter-10.jpg" alt="Misty river morning" class="w-full h-56 md:h-72 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center w-full">Presence.</div>
+                    </div>
+
                     <p class="mb-4">The water was freezing. At least it should have been. But when I immersed myself, I didn’t feel the cold in the way I expected. Instead, I felt presence.</p>
                     <p class="mb-4">Complete awareness. No overthinking. No future plans. No kilometre calculations. Just breath. Just water. Just existence. It shocked me. How could something so cold feel so alive?</p>
                     <p class="mb-4">After the dip, we visited a temple. Walked through old streets. Ate authentic local food — dahi jalebi, kachori — flavours deeply rooted in the city’s culture. Back home, I worked for a while.</p>
@@ -265,7 +364,7 @@
                 keyLesson: "Patience in the unseen",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1485236715568-ddc5ee6ca227?auto=format&fit=crop&q=80&w=1000" alt="Foggy road" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105 grayscale opacity-90" onerror="this.style.display='none'">
+                        <img src="images/chapter-11.jpg" alt="Foggy road" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105 grayscale opacity-90" onerror="this.parentElement.style.display='none'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Fog</div>
                     </div>
@@ -288,15 +387,21 @@
                 quote: "His knowledge wasn’t theoretical — it was experiential.",
                 keyLesson: "Fear is not the enemy, but a teacher",
                 fullText: `
-                    <p class="mb-4">The next morning in Ayodhya, I woke up early. The air was cold but clear. I walked toward the Ram Mandir around 6:30 AM.</p>
                     <p class="mb-4">Security was tight. Discipline everywhere. Devotion in every face. And when I entered… For a moment, it didn’t feel real. The structure, the scale, the atmosphere — it felt cinematic. Like stepping into a historical epic. Yet it was alive, breathing, sacred.</p>
                     <p class="mb-4">The energy inside the temple was powerful but controlled. No chaos. No shouting. Just focused devotion. When I stood there for darshan, I felt something quiet inside me align.</p>
-                    <p class="mb-4">Afterward, I visited Hanuman Garhi temple. The climb, the chants, the view — everything carried depth. Ayodhya wasn’t just a city. It felt layered with time.</p>
+                    
+                    <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform rotate-2 z-10">
+                        <img src="images/chapter-12.jpg" alt="Spiritual wisdom" class="w-full h-auto sepia-[.40]" onerror="this.parentElement.style.display='none'">
+                        <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">Experiential Wisdom</figcaption>
+                    </figure>
+
+                    <p class="mb-4 clear-none">Afterward, I visited Hanuman Garhi temple. The climb, the chants, the view — everything carried depth. Ayodhya wasn’t just a city. It felt layered with time.</p>
                     <p class="mb-4">Then came the queue for the Mangala Aarti pass. That’s where I met him. A sadhu from Ujjain.</p>
                     <p class="mb-4">We began talking casually. Within minutes, the conversation turned deep. He had lived on the road. His knowledge wasn’t theoretical — it was experiential. He spoke about solo travel as a form of discipline. About fear not being the enemy, but a teacher. About how journeys strip ego quietly. His wisdom felt ocean-like — calm but vast.</p>
                     <p class="mb-4">Standing in that queue, sharing stories with a wandering monk, I felt humbled. We were both travelers. Different directions. Same road.</p>
                     <p class="mb-4">After completing KYC verification and receiving the pass for the 3 AM Mangala Aarti, I walked back slowly through the streets. The rest of the day was peaceful. I worked for a while. Took long walks through Ayodhya. Observed people.</p>
                     <p>That night, I felt anticipation. Tomorrow would be sacred.</p>
+                    <div class="clear-both"></div>
                 `
             },
             {
@@ -307,17 +412,27 @@
                 quote: "From doubt in Mysuru… To the fire of Kashi. The journey had changed shape. And so had I.",
                 keyLesson: "Safety is respect. Awareness is survival.",
                 fullText: `
+
+                    <div class="my-8 rounded-xl overflow-hidden shadow-md border border-stone-200 bg-stone-900 aspect-video relative group">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="videos/chapter-13.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
                     <p class="mb-4">I woke up at 2:30 AM. Cold water bath. Layers of clothing. Silent streets. The Mangala Aarti at 3 AM was intimate. Limited people. Focused chants. Lamps moving rhythmically in the darkness. It didn’t feel like an event. It felt like participation.</p>
                     <p class="mb-4">By 4:30 AM, I returned to my stay. Rested briefly. And by 7 AM, I started toward Varanasi. Only 130 kilometres. But fog made it feel longer. Till Sultanpur, the road was slippery. Visibility low. Every kilometre demanded alertness.</p>
                     <p class="mb-4">Around 70 kilometres before Varanasi, I made a mistake. I stopped on the roadside to send a work email.</p>
                     <p class="mb-4">Within minutes, a few men arrived in a car. At first, casual questions. <em>“Where are you from?” “How much does the bike cost?”</em> Then one of them picked up my helmet. Another suggested I sit in their car while someone else “checked” the bike. The tone changed. It wasn’t loud. But it wasn’t comfortable. In that moment, my instincts activated.</p>
                     <p class="mb-4">Thankfully, another rider approached and sensed something was off. His presence shifted the atmosphere. He calmly told me later, <em>“Never stop like this in isolated stretches. If you need to work, stop at a dhaba or petrol bunk.”</em> I nodded. That moment was unsettling. The road had just reminded me — awareness must never drop.</p>
                     <p class="mb-4">I continued carefully and reached Varanasi by afternoon. Finding a stay with safe parking was extremely difficult. Narrow gallis. Confusing lanes. Parking chaos near the ghats. I refused to compromise. He had carried me safely this far. I would not leave him vulnerable. After searching through multiple lanes, I found a stay near the ghats with parking — but expensive. I paid without regret. Because safety is not an expense. It is respect.</p>
+                    
                     <div class="my-10 relative px-4">
                         <div class="absolute inset-0 bg-stone-900/40 mix-blend-multiply rounded-lg"></div>
-                        <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&q=80&w=1000" alt="Ganga Aarti flames" class="w-full h-56 md:h-72 object-cover rounded-lg shadow-inner contrast-125 saturate-150" onerror="this.style.display='none'">
+                        <img src="images/chapter-13.jpg" alt="Ganga Aarti flames" class="w-full h-56 md:h-72 object-cover rounded-lg shadow-inner contrast-125 saturate-150" onerror="this.parentElement.style.display='none'">
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_4px_6px_rgba(0,0,0,1)] text-center w-full">The Fire of Kashi.</div>
                     </div>
+
                     <p class="mb-4">After settling in, I walked toward the ghats. Visited Annapoorna Temple. Then toward Kashi Vishwanath. And then the evening unfolded. The Ganga Aarti. No photograph can explain it. No video captures it fully.</p>
                     <p class="mb-4">The river was dark, endless. Priests stood in synchronized formation. The first bell rang. Then chants. Then flames. Large lamps moving in perfect rhythm. Smoke rising like prayer. The fire reflected in the water. The air vibrated. I stood there — speechless. Not emotional in a dramatic way. But overwhelmed. It felt ancient. Timeless. Like centuries of devotion condensed into one evening.</p>
                     <p class="mb-4">I didn’t record much. I didn’t want to. Some moments are meant to live inside memory. I sat by the river till almost 11 PM. Watching. Listening. Breathing.</p>
@@ -332,6 +447,11 @@
                 quote: "Kashi didn’t feel like a destination anymore. It felt like a conversation.",
                 keyLesson: "From chasing to belonging",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-14.jpg" alt="Living Kashi" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Ghats</div>
+                    </div>
                     <p class="mb-4">I woke up at 6:30 AM. The city was still waking up. Without rushing, I walked toward the ghats. The air was crisp. The river calm. Morning light just beginning to touch the surface of the Ganga.</p>
                     <p class="mb-4">I took a small boat ride. It was surprisingly inexpensive — but priceless in experience. Sitting on that wooden boat, watching the ghats from the water, I felt something shift again. From the river, Kashi looks different. More ancient. More layered. More eternal.</p>
                     <p class="mb-4">The weather was chill. The water moved gently. People were bathing, praying, sitting quietly. After spending time on the riverbank, I returned around 8 AM, freshened up, and decided to explore further. I went toward BHU — Banaras Hindu University.</p>
@@ -353,15 +473,15 @@
                 quote: "The road connects you to places. But it also connects you to people who are rewriting themselves.",
                 keyLesson: "Intensity to Balance",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-15.jpg" alt="Bodh Gaya Temple" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Balance</div>
+                    </div>
                     <p class="mb-4">I woke up around 6:30 AM in Kashi. There was no urgency. But there was resistance. I’ve left many cities without looking back. But that morning felt different. From 6:45 to around 7:30, I walked along the ghats one last time.</p>
                     <p class="mb-4">The river was calm. Morning light was soft. Fewer voices. More truth. I didn’t want to leave. Not because I hadn’t seen enough. But because I had felt enough. Kashi wasn’t just a place I visited. It felt like a place that had read me.</p>
                     <p class="mb-4">I called a friend. Bihar came into the conversation. Bodh Gaya appeared in my mind like a quiet whisper. And just like that, the road called again. At 8:30 AM, everything was packed. I stood beside my bike in that narrow lane one last time. I touched the tank lightly. We rolled out around 9 AM.</p>
                     <p class="mb-4">By afternoon, I reached Bodh Gaya. Immediately, the atmosphere felt different from Kashi. Kashi vibrates. Bodh Gaya breathes. The town moved slower. Monks walked in quiet rhythm. Foreign travelers sat cross-legged beneath trees.</p>
-                    <div class="my-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1605640840428-5cb7831d1746?auto=format&fit=crop&q=80&w=1000" alt="Bodh Gaya Temple" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
-                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Balance</div>
-                    </div>
                     <p class="mb-4">I found a peaceful stay — clean, minimal, calm. The owner welcomed me warmly. We began talking casually... As I shared my journey, something changed in his expression. He wasn’t just listening politely. He was inspired.</p>
                     <p class="mb-4">Later that evening, our conversation deepened. He told me about his own journey. He had once been a businessman. Well connected. Successful. Life shifted. Loss happened. And now, he was running a small stay business. But there was no bitterness in him. Only rebuilding.</p>
                     <p class="mb-4">Two men in transition. One rebuilding externally. One rebuilding internally. His resilience moved me. Success had once been his identity. Now humility was. Before sleeping, I realised something quietly powerful: The road connects you to places. But it also connects you to people who are rewriting themselves.</p>
@@ -378,13 +498,13 @@
                 quote: "We had crossed from exploration into endurance.",
                 keyLesson: "Consistency builds character",
                 fullText: `
-                    <p class="mb-4">I woke up at 5:00 AM. It was still dark. Bodh Gaya was silent — monks not yet out, streets empty, air slightly cold. I packed quietly. The stay owner came out to check if I was leaving safely. He asked me to call once I reached. There was something comforting about that.</p>
-                    <p class="mb-4">Before starting, I stood beside my bike for a moment. 600+ kilometres. One stretch. No major sightseeing. Just road. I tightened the luggage straps carefully. Checked the chain. Looked at the tyres. Tapped the tank lightly. This wasn’t just a machine. He was about to carry me across an entire state line and beyond in a single day.</p>
-                    <div class="my-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1000" alt="Endless Highway" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-16.jpg" alt="Endless Highway" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Endurance</div>
                     </div>
+                    <p class="mb-4">I woke up at 5:00 AM. It was still dark. Bodh Gaya was silent — monks not yet out, streets empty, air slightly cold. I packed quietly. The stay owner came out to check if I was leaving safely. He asked me to call once I reached. There was something comforting about that.</p>
+                    <p class="mb-4">Before starting, I stood beside my bike for a moment. 600+ kilometres. One stretch. No major sightseeing. Just road. I tightened the luggage straps carefully. Checked the chain. Looked at the tyres. Tapped the tank lightly. This wasn’t just a machine. He was about to carry me across an entire state line and beyond in a single day.</p>
                     <p class="mb-4">We started before sunrise. The roads around Rajgir were surprisingly good. I decided to take a shortcut that would save around 50–60 kilometres. It felt like a small strategic victory — something I would not have attempted in the early days when doubt controlled me. Now, I trusted my navigation. And I trusted him.</p>
                     <p class="mb-4">There’s something meditative about long-distance riding. Helmet on. Music low. Engine humming steadily. The world narrows to throttle control and road awareness. When you ride 600 kilometres in a day, conversation disappears. Thoughts become rhythm. You stop analysing. You just move.</p>
                     <p class="mb-4">By around 3 PM, I entered West Bengal. That moment felt significant. Not dramatic. But symbolic. Last time I had come through the Siliguri corridor, it had felt different. Back then, I was travelling with a different emotional state. This time, I was alone — but not lonely.</p>
@@ -401,6 +521,11 @@
                 quote: "Kindness travels faster than distance.",
                 keyLesson: "Faith in strangers and the machine",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-17.jpg" alt="Through the Fog" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Climb</div>
+                    </div>
                     <p class="mb-4">I woke up at 5:15 AM. It was still dark in Siliguri. The air carried that early-morning dampness. I packed slowly, methodically. Checked the luggage straps again. Cleaned and lubricated the chain carefully. On a 600-kilometre day, small negligence becomes big regret.</p>
                     <p class="mb-4">At 5:45 AM, I started. Within 30 minutes, everything changed. Fog. Not light mist. Dense, thick, suffocating fog. Visibility dropped to barely 3–4 feet. I couldn’t see the road clearly. Headlight beams bounced back at me. Trucks appeared like shadows and disappeared just as fast. I had to slow down to 20–30 km/h. My gloves were cold. My visor wet. My body started shivering.</p>
                     <p class="mb-4">After around 50–60 kilometres of riding like that, I couldn’t continue safely. I spotted a tiny tea stall on the side. It was run by an elderly grandmother. I parked carefully. Removed my helmet. My hands were shaking. She looked at me once — and immediately understood.</p>
@@ -420,16 +545,16 @@
                 quote: "In Kashi, you feel watched by centuries. In Laitlum, you feel dissolved into the horizon.",
                 keyLesson: "Reconnection and surrender",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-18.jpg" alt="Laitlum Valleys" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Laitlum Canyon</div>
+                    </div>
                     <p class="mb-4">After two back-to-back 600+ kilometre days, Day 18 felt different from the moment I opened my eyes. I woke up around 6 or 6:30 AM. For the first time in many days, there was no urgency in my body. No need to check the chain. No tightening of luggage straps. No mental calculation of distance and fuel stops. My bike rested outside my friend’s house. And strangely, so did I.</p>
                     <p class="mb-4">We drove toward a sunrise point near Shillong — high above the city where clouds float beneath you like a moving ocean. Shillong mornings feel different from the plains. Colder. Cleaner. More intimate. We stood silently for a while. No rush for photos. No need to prove we were there. Just presence.</p>
                     <p class="mb-4">On the drive back, I realised something simple — for the first time since I started this journey, I wasn’t responsible for navigation. I wasn’t balancing throttle and clutch. I wasn’t scanning the road constantly. I was just sitting. Looking. Absorbing.</p>
                     <p class="mb-4">Back home, breakfast was ready. His father spoke warmly, asking about my ride with genuine interest. His mother ensured I ate properly, almost insisting. His sister interacted naturally, without formality. There was no “guest treatment.” There was belonging.</p>
                     <p class="mb-4">We had already decided — for the next two days, my bike would rest. Meghalaya evenings turn extremely cold and foggy, and riding narrow hill roads after sunset would not be wise. For the first time in this entire journey, I consciously allowed him to rest. After carrying me across states, fog, traffic, highways, and 600-kilometre endurance stretches — he deserved it. And maybe I did too.</p>
-                    <div class="my-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1518182170546-076616fdfaaf?auto=format&fit=crop&q=80&w=1000" alt="Laitlum Valleys" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
-                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Laitlum Canyon</div>
-                    </div>
                     <p class="mb-4">We took my friend’s car and headed toward Cherrapunji (Sohra). The drive itself felt cinematic. Green cliffs opened into deep valleys. Clouds brushed past the road. The hills of Meghalaya have a softness to them — not harsh like high mountains, but endless and rolling.</p>
                     <p class="mb-4">Later, we went toward Laitlum Canyon. That place was something else. Wide open valleys stretched endlessly. Layers of hills faded into pale blue distance. Wind moved strongly across the cliffs. Standing there, I felt something similar to what I felt in Kashi — but calmer. Kashi was intensity. Laitlum was expansion. In Kashi, you feel watched by centuries. In Laitlum, you feel dissolved into the horizon.</p>
                     <p>When I finally lay down to sleep, I realised something quietly powerful: This journey wasn’t only about solitude and self-discovery. It was also about reconnection. With old friends. With families. With versions of myself that existed years ago. And outside, my bike rested silently. Not in a paid parking lot. Not in a narrow, chaotic lane. Not under worry. But in a friend’s home. Safe. Just like me.</p>
@@ -443,6 +568,11 @@
                 quote: "This journey was no longer just about destinations. It was about responsibility.",
                 keyLesson: "Responsibility to the machine",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-19.jpg" alt="Waterfalls and Sohra" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Mechanics</div>
+                    </div>
                     <p class="mb-4">I woke up around 5:45 AM. Before anyone else. Shillong mornings had already become special to me, so I decided to go alone to the sunrise point. When I reached, no one was there. Just me. And the horizon.</p>
                     <p class="mb-4">Clouds rolled below the cliffs like a silent ocean. The sky slowly shifted colours. The air was sharp and clean. Standing there alone, I felt something deeply peaceful — not excitement, not thrill — just stillness. Moments like that don’t need witnesses. They need presence.</p>
                     <p class="mb-4">After spending quiet time there, I returned home. By then, my friend was ready. We had breakfast around 7:30 AM and headed toward Cherrapunji again. That day was about exploration. We visited the Seven Sisters Falls — water streaming down massive cliffs in multiple ribbons. The scale was overwhelming. We explored caves — dark, damp, echoing. Inside the caves, you hear your own breath louder than anything else.</p>
@@ -461,6 +591,11 @@
                 quote: "Not every problem needs panic. Sometimes, it needs pause.",
                 keyLesson: "Obstacles become experiences",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-20.jpg" alt="Sacred Forest" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Sacred Hills</div>
+                    </div>
                     <p class="mb-4">It was Christmas morning. I woke up around 6:30 AM. Before leaving, I wished my friend and his family. There was festive warmth in the house — simple, grounded, genuine. But before heading toward South Meghalaya, I had unfinished responsibility. The drain bolt from last night’s oil change had not been fully tightened. I could not take a risk.</p>
                     <p class="mb-4">Early morning, on Christmas Day, I searched for a garage. Finally, at a Tata Motors service station, a kind mechanic helped me. He understood the issue immediately, found the correct ring and helped tighten it properly. That moment brought relief. Now I could ride with confidence.</p>
                     <p class="mb-4">One of the places I had planned to visit was the Sacred Forest — Mawphlang Sacred Grove. As I entered, the atmosphere changed. The forest felt untouched. Old. Almost guarded. A local guide joined me. And the surprising part — he spoke Kannada. Hearing Kannada in the middle of Meghalaya felt unexpected and comforting.</p>
@@ -479,14 +614,14 @@
                 quote: "Not every difficult moment is a problem. Sometimes it is the story.",
                 keyLesson: "Comfort was never the goal",
                 fullText: `
-                    <p class="mb-4">I woke up around 5 AM. The first thing I did was check my bike. The headlight that had stopped working the previous evening needed fixing. With limited tools and whatever I had available, I managed to secure the wiring and taped it carefully. It wasn’t a perfect repair. But it would work. That moment felt satisfying — small mechanical victories on the road build confidence.</p>
-                    <p class="mb-4">Then came the difficult part. Saying goodbye. His family gathered near the entrance. His father spoke kindly, wishing me a safe journey ahead. His sister smiled warmly. And my friend… After 7–8 years, we had met again, spent meaningful days together, and now the road was calling me away. We hugged. It was emotional. Not dramatic. But real.</p>
-                    <p class="mb-4">My plan for the day was to reach Silchar in Assam. I assumed the road would be manageable... But reality unfolded differently. After about 100 kilometres, the road began filling with trucks. Endless trucks. Heavy vehicles crawling slowly through narrow stretches of road. The landscape was beautiful but the traffic was intimidating.</p>
-                    <div class="my-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1516428751543-9ce659695034?auto=format&fit=crop&q=80&w=1000" alt="Traffic in the hills" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-21.jpg" alt="Traffic in the hills" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Gridlock</div>
                     </div>
+                    <p class="mb-4">I woke up around 5 AM. The first thing I did was check my bike. The headlight that had stopped working the previous evening needed fixing. With limited tools and whatever I had available, I managed to secure the wiring and taped it carefully. It wasn’t a perfect repair. But it would work. That moment felt satisfying — small mechanical victories on the road build confidence.</p>
+                    <p class="mb-4">Then came the difficult part. Saying goodbye. His family gathered near the entrance. His father spoke kindly, wishing me a safe journey ahead. His sister smiled warmly. And my friend… After 7–8 years, we had met again, spent meaningful days together, and now the road was calling me away. We hugged. It was emotional. Not dramatic. But real.</p>
+                    <p class="mb-4">My plan for the day was to reach Silchar in Assam. I assumed the road would be manageable... But reality unfolded differently. After about 100 kilometres, the road began filling with trucks. Endless trucks. Heavy vehicles crawling slowly through narrow stretches of road. The landscape was beautiful but the traffic was intimidating.</p>
                     <p class="mb-4">Around 6 PM, things became worse. A massive traffic jam. The road ahead was blocked. Not just a short jam — almost 10 kilometres of trucks stuck on a narrow hill road. Dust filled the air. The road itself had almost disappeared in some sections. It was broken, uneven, barely rideable.</p>
                     <p class="mb-4">I spoke to a few truck drivers. They looked exhausted. One of them said something that stayed with me. <em>“Brother, this jam may take days to clear.”</em> Days.</p>
                     <p class="mb-4">For a moment I stood there beside my bike, looking at that endless row of trucks disappearing into darkness. Strangely, I didn’t panic. There was no fear inside me. Instead, I felt something unexpected — a quiet thrill. This… was real adventure. Not the kind you see in photos. Not the romantic version people imagine. This was dust, darkness, uncertainty and decision-making on the spot.</p>
@@ -502,16 +637,16 @@
                 quote: "Sometimes the best parts of a journey are not planned. They happen when you listen to the road.",
                 keyLesson: "Embrace the detour",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-22.jpg" alt="Paragliding over hills" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Flight</div>
+                    </div>
                     <p class="mb-4">I woke up early again, around 5 AM. Silchar was still quiet. Before leaving, I realised something important — I was completely out of cash. So after riding about 30–35 kilometres, I stopped near an ATM. Long-distance travel teaches you to manage small practical things carefully — fuel, cash, food, rest.</p>
                     <p class="mb-4">Around 8:30 or 9 AM, I stopped again because I was hungry. While eating, I began talking with a few local people there. One of them asked about my ride and suggested something unexpected. <em>“Why don’t you go to Jampui Hills?”</em> he said.</p>
                     <p class="mb-4">My original plan for the day was simple: enter Tripura and reach Agartala. But travel rarely follows fixed plans. The more they spoke about Jampui Hills — the views, the landscape, the peaceful villages — the more curious I became. I decided to at least ride toward that side and see what happened.</p>
                     <p class="mb-4">By around 11:30 AM, I reached the region near Kanchanpur. There I met a few local people... When he heard I was from Karnataka, he immediately started speaking in Kannada. In the middle of Tripura, hearing Kannada felt surprising and comforting at the same time. He encouraged me to go to Jampui Hills.</p>
                     <p class="mb-4">Around 3 PM, I reached Jampui Hills. And something unexpected happened again. There was paragliding there. Without thinking too much, I decided to try it. The flight became one of the most adventurous moments of the entire trip.</p>
-                    <div class="my-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&q=80&w=1000" alt="Paragliding over hills" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
-                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Flight</div>
-                    </div>
                     <p class="mb-4">Floating above the valleys of Tripura, watching endless green hills stretch beneath me, felt unreal. The entire landscape looked like a green ocean of hills. From up there, the villages, roads, and forests all looked tiny. For a moment, the long ride, the dust, the fatigue — everything disappeared. It was pure freedom.</p>
                     <p class="mb-4">When we landed, a small crowd had gathered there. Some people clapped. Some came forward and started asking questions about my ride. <em>“We are happy you came to explore Tripura. Many people don’t know how beautiful our state is.”</em></p>
                     <p>It was Saturday evening. Almost every stay was full. But again, the road solved the problem in its own way. I met a local man who understood my situation and offered a simple place to sleep. It wasn’t a formal hotel. Just a small place with a bed. But for that night, it was enough. A random breakfast conversation had changed my plan. And that change had given me a new destination, new people, and an unforgettable paragliding experience.</p>
@@ -525,6 +660,11 @@
                 quote: "Adventure isn’t always comfortable. Sometimes it is uncertainty.",
                 keyLesson: "If I came all the way here, why choose comfort now?",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-23.jpg" alt="Shortcut Unknown" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Shortcut</div>
+                    </div>
                     <p class="mb-4">I woke up very early that morning, around 4:30 AM. Before leaving Jampui Hills, I wanted to witness one more sunrise. Around 5:15 AM, the sky slowly began to glow. The sun appeared gently over the hills, lighting the valleys of Tripura with golden light.</p>
                     <p class="mb-4">My next destination was Mizoram, specifically Aizawl. When I checked the route, there were two options: A longer but safer road — around 400–430 km. A shorter route — about 200 km, but through remote mountains and villages. The longer road meant comfort. The shorter road meant adventure.</p>
                     <p class="mb-4">I stood there thinking for a few minutes. Then I told myself something simple: <em>If I came all the way here, why choose comfort now?</em> So I took the shortcut.</p>
@@ -543,6 +683,11 @@
                 quote: "Sometimes travel is not about moving. Sometimes it is about sitting still and absorbing where you are.",
                 keyLesson: "The power of observation and stillness",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-24.jpg" alt="Aizawl" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Stillness</div>
+                    </div>
                     <p class="mb-4">After the intense ride through the mountains the previous day, Day 24 felt calm from the moment I woke up. I woke up early, as usual. The room was quiet, and the view from my stay was beautiful. When I stepped outside, the hills of Aizawl were still wrapped in early morning light.</p>
                     <p class="mb-4">There was no hurry that morning. For the first time in many days, I had no plan. After taking a bath, I decided to walk toward Bara Bazaar. What surprised me immediately was how early the city wakes up. By 5:30 or 6 AM, people were already active.</p>
                     <p class="mb-4">Later in the morning, I rode my bike to a nearby viewpoint. The sky was cloudy that day, but the view was still breathtaking. Hills stretched endlessly in every direction, and houses seemed to grow out of the slopes. I parked my bike and walked to the viewpoint. Sitting there, listening to a song on my phone and looking at the hills, I spent nearly half an hour doing nothing. Sometimes travel is not about moving. Sometimes it is about sitting still and absorbing where you are.</p>
@@ -559,13 +704,13 @@
                 quote: "Some moments can only be experienced if you chase them.",
                 keyLesson: "Trusting instinct over maps",
                 fullText: `
-                    <p class="mb-4">The day began unusually early. I woke up at 2:30 AM. The plan was to reach Reiek Village and Reiek Peak before sunrise. The person I had met the previous day — a traveller from Prayagraj — had agreed to join me. By 3 AM, we walked down to the parking area. But just as I turned the key, I realised something unexpected. I had forgotten to refuel the bike.</p>
-                    <p class="mb-4">I mounted my phone on the bike and started navigation. But after about 4–5 kilometres, Google Maps took us into an extremely narrow road — a steep downhill path filled with loose stones. It was just a trail through bushes. No houses. No lights. No network. We stopped. The other traveller looked at me and said, <em>“Maybe we should go back.”</em> He was right. That moment reminded me of something important: In the Northeast, sometimes trusting people is better than trusting maps.</p>
-                    <div class="my-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" alt="Mountain Sunrise" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-25.jpg" alt="Mountain Sunrise" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Chase</div>
                     </div>
+                    <p class="mb-4">The day began unusually early. I woke up at 2:30 AM. The plan was to reach Reiek Village and Reiek Peak before sunrise. The person I had met the previous day — a traveller from Prayagraj — had agreed to join me. By 3 AM, we walked down to the parking area. But just as I turned the key, I realised something unexpected. I had forgotten to refuel the bike.</p>
+                    <p class="mb-4">I mounted my phone on the bike and started navigation. But after about 4–5 kilometres, Google Maps took us into an extremely narrow road — a steep downhill path filled with loose stones. It was just a trail through bushes. No houses. No lights. No network. We stopped. The other traveller looked at me and said, <em>“Maybe we should go back.”</em> He was right. That moment reminded me of something important: In the Northeast, sometimes trusting people is better than trusting maps.</p>
                     <p class="mb-4">By around 4:45 AM, we finally reached the parking area near the base point. From there, the peak was still 6 kilometres away. One driver agreed to take us along with a few other travellers. From the drop point we started walking. By around 5:20–5:30 AM, we reached the peak.</p>
                     <p class="mb-4">At 5:45 AM, the sun slowly rose above the mountains. The sky turned golden. The clouds beneath the hills started glowing. It was one of those moments when everyone becomes silent. No words. Just the sound of wind and the quiet awe of nature. Standing there, looking across the mountains, I felt grateful that we had taken the effort to wake up so early. Some moments can only be experienced if you chase them.</p>
                     <p class="mb-4">Then reality returned. My bike still had very little fuel. Fortunately, someone helped us arrange petrol in a plastic bottle from another place. But another issue appeared. Because of the steep climbs and engine heat, oil had started leaking slightly from the engine area. Once back in Aizawl, I called a friend who knew about bikes and sent him pictures. After checking them, he reassured me. <em>“You can ride another 200–300 kilometres safely. Just top up the engine oil and replace the seal when you find a mechanic.”</em></p>
@@ -580,6 +725,11 @@
                 quote: "Sometimes changing plans is not weakness. It is wisdom.",
                 keyLesson: "Information from locals is better than a map",
                 fullText: `
+                    <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
+                        <img src="images/chapter-26.jpg" alt="Aizawl to Silchar" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Detour</div>
+                    </div>
                     <p class="mb-4">I woke up early that morning. The plan for the day was simple — ride from Aizawl to Silchar, which was about 260 kilometres away. On paper it looked manageable, though the estimated travel time was almost seven hours.</p>
                     <p class="mb-4">By around 8 AM, I reached the Mizoram–Assam border. There was a small tea stall there, so I stopped for a break. The tea stall was run by a young girl and her family. When I asked how much I owed them for tea and biscuits, they refused to take any money. They simply said, <em>“You are travelling alone. It’s okay.”</em></p>
                     <p class="mb-4">From the border, one of the locals suggested a road that passed through forest areas. I trusted the suggestion and took that route. Soon I realised it was another difficult road. Extremely dusty. Broken surfaces. Loose stones everywhere. Sometimes I could ride only at 10–20 km/h. There was no mobile network, no shops, and very few vehicles passing by. The road felt isolated.</p>
