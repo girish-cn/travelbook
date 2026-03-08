@@ -22,21 +22,32 @@
         }
         .active-tab { border-bottom: 2px solid #ea580c; color: #ea580c; font-weight: 600; }
         
-        /* Clean up Google Translate Widget Styling */
-        .goog-te-banner-frame.skiptranslate { display: none !important; }
-        body { top: 0px !important; }
-        .goog-te-gadget-simple { background-color: #ffffff !important; border: 1px solid #d6d3d1 !important; border-radius: 9999px !important; padding: 6px 16px !important; font-family: inherit !important; display: inline-flex !important; align-items: center; }
-        .goog-te-gadget-simple .goog-te-menu-value span { color: #57534e !important; font-weight: 600; font-size: 0.875rem; }
-        .goog-te-gadget-simple img, .goog-te-gadget-icon { display: none !important; } /* Hides Google Logo for cleaner look */
+        /* Hide Google Translate completely to use custom dropdown & hide banners */
+        .goog-te-banner-frame.skiptranslate, .goog-te-banner-frame { display: none !important; }
+        body { top: 0px !important; position: static !important; }
+        #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
+        #google_translate_element { display: none !important; }
     </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans leading-relaxed selection:bg-orange-100 selection:text-orange-800">
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-screen flex flex-col">
         
-        <!-- Google Translate Widget Container -->
-        <div class="flex justify-end mb-2 relative z-50">
-            <div id="google_translate_element"></div>
+        <!-- Custom Language Selector -->
+        <div class="flex justify-end mb-2 relative z-50 items-center space-x-3">
+            <span class="text-xs font-bold text-stone-400 uppercase tracking-widest">Translate</span>
+            <div class="relative">
+                <select id="custom-lang-selector" onchange="changeLanguage(this.value)" class="appearance-none bg-white border border-stone-200 text-stone-600 text-sm rounded-full focus:ring-2 focus:ring-orange-500 focus:border-orange-500 block py-1.5 pl-4 pr-8 shadow-sm outline-none transition-colors cursor-pointer font-semibold">
+                    <option value="en">English</option>
+                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-stone-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+            </div>
+            <!-- Hidden original widget -->
+            <div id="google_translate_element" style="display:none;"></div>
         </div>
 
         <header class="mb-10 text-center space-y-4">
@@ -770,10 +781,46 @@
         const navContainer = document.getElementById('chapter-nav');
         const journalBox = document.getElementById('journal-box');
 
+        // --- LANGUAGE TRANSLATION LOGIC ---
+        function changeLanguage(lang) {
+            const selectField = document.querySelector(".goog-te-combo");
+            if (selectField) {
+                selectField.value = lang;
+                selectField.dispatchEvent(new Event('change'));
+            } else {
+                // If Google script hasn't loaded yet, retry in 500ms
+                setTimeout(() => changeLanguage(lang), 500);
+            }
+        }
+
+        function syncLanguageDropdown() {
+            // Keep the custom dropdown in sync if the page is refreshed with a language active
+            const interval = setInterval(() => {
+                const combo = document.querySelector(".goog-te-combo");
+                if (combo) {
+                    clearInterval(interval);
+                    const selector = document.getElementById('custom-lang-selector');
+                    // Check if google sets a value, if not check cookies
+                    if (combo.value) {
+                        selector.value = combo.value;
+                    } else {
+                        const match = document.cookie.match(/(?:^|;)\s*googtrans=([^;]*)/);
+                        if (match) {
+                            const currentLang = match[1].split('/').pop();
+                            if (currentLang === 'en' || currentLang === 'kn') {
+                                selector.value = currentLang;
+                            }
+                        }
+                    }
+                }
+            }, 500);
+        }
+
         // --- INITIALIZATION ---
         function initApp() {
             renderNavigation();
             loadChapter(0);
+            syncLanguageDropdown();
         }
 
         // --- RENDER FUNCTIONS ---
@@ -889,7 +936,7 @@
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
                 includedLanguages: 'en,kn', /* English and Kannada only */
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                autoDisplay: false
             }, 'google_translate_element');
         }
     </script>
