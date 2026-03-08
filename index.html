@@ -21,11 +21,24 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .active-tab { border-bottom: 2px solid #ea580c; color: #ea580c; font-weight: 600; }
+        
+        /* Clean up Google Translate Widget Styling */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        .goog-te-gadget-simple { background-color: #ffffff !important; border: 1px solid #d6d3d1 !important; border-radius: 9999px !important; padding: 6px 16px !important; font-family: inherit !important; display: inline-flex !important; align-items: center; }
+        .goog-te-gadget-simple .goog-te-menu-value span { color: #57534e !important; font-weight: 600; font-size: 0.875rem; }
+        .goog-te-gadget-simple img, .goog-te-gadget-icon { display: none !important; } /* Hides Google Logo for cleaner look */
     </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans leading-relaxed selection:bg-orange-100 selection:text-orange-800">
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-screen flex flex-col">
+        
+        <!-- Google Translate Widget Container -->
+        <div class="flex justify-end mb-2 relative z-50">
+            <div id="google_translate_element"></div>
+        </div>
+
         <header class="mb-10 text-center space-y-4">
             <div class="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-bold tracking-widest uppercase">Travel Memoir</div>
             <h1 class="text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight">10,300 Kilometres of Becoming</h1>
@@ -121,7 +134,7 @@
                 keyLesson: "The journey begins before the departure",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-1.jpg" alt="Departure" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-1.jpg" alt="Departure" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Departure</div>
                     </div>
@@ -153,7 +166,7 @@
                     <p class="mb-4">The wedding ended beautifully. There was food, conversation, and the familiar comfort of community. For a moment, life felt simple. After meeting another college friend, I made a safe decision. I would ride to Hubli.</p>
                     
                     <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform rotate-2 z-10">
-                        <img src="images/chapter-2.jpg" alt="Friends gathering" class="w-full h-auto grayscale sepia-[.30]" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-2.jpg" alt="Friends gathering" class="w-full h-auto grayscale sepia-[.30]" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">The warmth of community</figcaption>
                     </figure>
 
@@ -179,7 +192,7 @@
                     
                     <div class="my-10 relative px-4">
                         <div class="absolute inset-0 bg-stone-900/10 mix-blend-multiply rounded-lg"></div>
-                        <img src="images/chapter-3.jpg" alt="Parked motorcycle" class="w-full h-48 md:h-56 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-3.jpg" alt="Parked motorcycle" class="w-full h-48 md:h-56 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center w-full">The Pause.</div>
                     </div>
 
@@ -199,7 +212,7 @@
                 keyLesson: "Responsibility toward one's own choice",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-4.jpg" alt="Contemplation" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-4.jpg" alt="Contemplation" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Contemplation</div>
                     </div>
@@ -228,7 +241,7 @@
                     <p class="mb-4">There was no rush. No dramatic music playing in my head. No feeling of conquering the world. Just calm. The early morning air was cold. Highways were empty. The engine sounded steady beneath me.</p>
                     
                     <div class="my-8 p-1.5 bg-stone-100 shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded transform -rotate-1 mx-auto max-w-xl transition hover:rotate-0 duration-300">
-                        <img src="images/chapter-5.jpg" alt="Open road in India" class="w-full h-56 md:h-72 object-cover rounded border border-stone-200" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-5.jpg" alt="Open road in India" class="w-full h-56 md:h-72 object-cover rounded border border-stone-200" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                     </div>
 
                     <p class="mb-4">For the first time, I wasn’t thinking about whether I would return. I was thinking about what the road might show me.</p>
@@ -246,7 +259,7 @@
                 keyLesson: "Travel becomes lifestyle",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-6.jpg" alt="Flow" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-6.jpg" alt="Flow" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Flow</div>
                     </div>
@@ -272,7 +285,7 @@
                     <p class="mb-4">For a brief moment, irritation tried to surface. But this time, I didn’t overreact. Eventually, I found a simple room. Enough.</p>
                     
                     <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform rotate-1 z-10">
-                        <img src="images/chapter-7.jpg" alt="Quiet street" class="w-full h-auto sepia-[.20]" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-7.jpg" alt="Quiet street" class="w-full h-auto sepia-[.20]" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">Familiarity</figcaption>
                     </figure>
 
@@ -293,7 +306,7 @@
                 keyLesson: "The machine becomes a partner",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-8.jpg" alt="Motorcycle companion" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-8.jpg" alt="Motorcycle companion" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Freedom</div>
                     </div>
@@ -317,7 +330,7 @@
                     <p class="mb-4">The morning began slowly. Before leaving, I had a conversation with a Kashmiri traveler in the hostel. Within minutes, we connected deeply — the kind of connection that only happens when two travelers share road stories.</p>
                     
                     <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform -rotate-2 z-10">
-                        <img src="images/chapter-9.jpg" alt="Warmth and connection" class="w-full h-auto sepia-[.40]" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-9.jpg" alt="Warmth and connection" class="w-full h-auto sepia-[.40]" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">Genuine Welcome</figcaption>
                     </figure>
 
@@ -343,7 +356,7 @@
                     
                     <div class="my-10 relative px-4">
                         <div class="absolute inset-0 bg-stone-900/10 mix-blend-multiply rounded-lg"></div>
-                        <img src="images/chapter-10.jpg" alt="Misty river morning" class="w-full h-56 md:h-72 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-10.jpg" alt="Misty river morning" class="w-full h-56 md:h-72 object-cover rounded-lg shadow-inner grayscale contrast-125" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-center w-full">Presence.</div>
                     </div>
 
@@ -364,7 +377,7 @@
                 keyLesson: "Patience in the unseen",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-11.jpg" alt="Foggy road" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105 grayscale opacity-90" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-11.jpg" alt="Foggy road" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105 grayscale opacity-90" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Fog</div>
                     </div>
@@ -387,14 +400,15 @@
                 quote: "His knowledge wasn’t theoretical — it was experiential.",
                 keyLesson: "Fear is not the enemy, but a teacher",
                 fullText: `
-                    <p class="mb-4">Security was tight. Discipline everywhere. Devotion in every face. And when I entered… For a moment, it didn’t feel real. The structure, the scale, the atmosphere — it felt cinematic. Like stepping into a historical epic. Yet it was alive, breathing, sacred.</p>
-                    <p class="mb-4">The energy inside the temple was powerful but controlled. No chaos. No shouting. Just focused devotion. When I stood there for darshan, I felt something quiet inside me align.</p>
+                    <p class="mb-4">The next morning in Ayodhya, I woke up early. The air was cold but clear. I walked toward the Ram Mandir around 6:30 AM.</p>
                     
                     <figure class="float-right w-1/2 sm:w-1/3 ml-6 mb-4 mt-2 p-2 bg-white shadow-lg border border-stone-200 transform rotate-2 z-10">
-                        <img src="images/chapter-12.jpg" alt="Spiritual wisdom" class="w-full h-auto sepia-[.40]" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-12.jpg" alt="Spiritual wisdom" class="w-full h-auto sepia-[.40]" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <figcaption class="text-[10px] text-center mt-2 text-stone-500 font-sans uppercase tracking-widest border-t border-stone-100 pt-1">Experiential Wisdom</figcaption>
                     </figure>
 
+                    <p class="mb-4">Security was tight. Discipline everywhere. Devotion in every face. And when I entered… For a moment, it didn’t feel real. The structure, the scale, the atmosphere — it felt cinematic. Like stepping into a historical epic. Yet it was alive, breathing, sacred.</p>
+                    <p class="mb-4">The energy inside the temple was powerful but controlled. No chaos. No shouting. Just focused devotion. When I stood there for darshan, I felt something quiet inside me align.</p>
                     <p class="mb-4 clear-none">Afterward, I visited Hanuman Garhi temple. The climb, the chants, the view — everything carried depth. Ayodhya wasn’t just a city. It felt layered with time.</p>
                     <p class="mb-4">Then came the queue for the Mangala Aarti pass. That’s where I met him. A sadhu from Ujjain.</p>
                     <p class="mb-4">We began talking casually. Within minutes, the conversation turned deep. He had lived on the road. His knowledge wasn’t theoretical — it was experiential. He spoke about solo travel as a form of discipline. About fear not being the enemy, but a teacher. About how journeys strip ego quietly. His wisdom felt ocean-like — calm but vast.</p>
@@ -412,14 +426,6 @@
                 quote: "From doubt in Mysuru… To the fire of Kashi. The journey had changed shape. And so had I.",
                 keyLesson: "Safety is respect. Awareness is survival.",
                 fullText: `
-
-                    <div class="my-8 rounded-xl overflow-hidden shadow-md border border-stone-200 bg-stone-900 aspect-video relative group">
-                        <video controls class="w-full h-full object-cover">
-                            <source src="videos/chapter-13.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
                     <p class="mb-4">I woke up at 2:30 AM. Cold water bath. Layers of clothing. Silent streets. The Mangala Aarti at 3 AM was intimate. Limited people. Focused chants. Lamps moving rhythmically in the darkness. It didn’t feel like an event. It felt like participation.</p>
                     <p class="mb-4">By 4:30 AM, I returned to my stay. Rested briefly. And by 7 AM, I started toward Varanasi. Only 130 kilometres. But fog made it feel longer. Till Sultanpur, the road was slippery. Visibility low. Every kilometre demanded alertness.</p>
                     <p class="mb-4">Around 70 kilometres before Varanasi, I made a mistake. I stopped on the roadside to send a work email.</p>
@@ -429,11 +435,19 @@
                     
                     <div class="my-10 relative px-4">
                         <div class="absolute inset-0 bg-stone-900/40 mix-blend-multiply rounded-lg"></div>
-                        <img src="images/chapter-13.jpg" alt="Ganga Aarti flames" class="w-full h-56 md:h-72 object-cover rounded-lg shadow-inner contrast-125 saturate-150" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-13.jpg" alt="Ganga Aarti flames" class="w-full h-56 md:h-72 object-cover rounded-lg shadow-inner contrast-125 saturate-150" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white/90 text-2xl md:text-3xl font-serif italic drop-shadow-[0_4px_6px_rgba(0,0,0,1)] text-center w-full">The Fire of Kashi.</div>
                     </div>
 
                     <p class="mb-4">After settling in, I walked toward the ghats. Visited Annapoorna Temple. Then toward Kashi Vishwanath. And then the evening unfolded. The Ganga Aarti. No photograph can explain it. No video captures it fully.</p>
+                    
+                    <div class="my-8 rounded-xl overflow-hidden shadow-md border border-stone-200 bg-stone-900 aspect-video relative group">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="videos/chapter-13.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
                     <p class="mb-4">The river was dark, endless. Priests stood in synchronized formation. The first bell rang. Then chants. Then flames. Large lamps moving in perfect rhythm. Smoke rising like prayer. The fire reflected in the water. The air vibrated. I stood there — speechless. Not emotional in a dramatic way. But overwhelmed. It felt ancient. Timeless. Like centuries of devotion condensed into one evening.</p>
                     <p class="mb-4">I didn’t record much. I didn’t want to. Some moments are meant to live inside memory. I sat by the river till almost 11 PM. Watching. Listening. Breathing.</p>
                     <p>When I finally walked back at 11:30 PM and saw my bike parked safely, I smiled. From doubt in Mysuru… To the fire of Kashi. The journey had changed shape. And so had I.</p>
@@ -448,7 +462,7 @@
                 keyLesson: "From chasing to belonging",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-14.jpg" alt="Living Kashi" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-14.jpg" alt="Living Kashi" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Ghats</div>
                     </div>
@@ -474,7 +488,7 @@
                 keyLesson: "Intensity to Balance",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-15.jpg" alt="Bodh Gaya Temple" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-15.jpg" alt="Bodh Gaya Temple" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Balance</div>
                     </div>
@@ -499,7 +513,7 @@
                 keyLesson: "Consistency builds character",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-16.jpg" alt="Endless Highway" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-16.jpg" alt="Endless Highway" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Endurance</div>
                     </div>
@@ -522,7 +536,7 @@
                 keyLesson: "Faith in strangers and the machine",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-17.jpg" alt="Through the Fog" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-17.jpg" alt="Through the Fog" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Climb</div>
                     </div>
@@ -546,7 +560,7 @@
                 keyLesson: "Reconnection and surrender",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-18.jpg" alt="Laitlum Valleys" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-18.jpg" alt="Laitlum Valleys" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Laitlum Canyon</div>
                     </div>
@@ -569,7 +583,7 @@
                 keyLesson: "Responsibility to the machine",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-19.jpg" alt="Waterfalls and Sohra" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-19.jpg" alt="Waterfalls and Sohra" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Mechanics</div>
                     </div>
@@ -592,7 +606,7 @@
                 keyLesson: "Obstacles become experiences",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-20.jpg" alt="Sacred Forest" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-20.jpg" alt="Sacred Forest" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Sacred Hills</div>
                     </div>
@@ -615,7 +629,7 @@
                 keyLesson: "Comfort was never the goal",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-21.jpg" alt="Traffic in the hills" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-21.jpg" alt="Traffic in the hills" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Gridlock</div>
                     </div>
@@ -638,7 +652,7 @@
                 keyLesson: "Embrace the detour",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-22.jpg" alt="Paragliding over hills" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-22.jpg" alt="Paragliding over hills" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Flight</div>
                     </div>
@@ -661,7 +675,7 @@
                 keyLesson: "If I came all the way here, why choose comfort now?",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-23.jpg" alt="Shortcut Unknown" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-23.jpg" alt="Shortcut Unknown" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Shortcut</div>
                     </div>
@@ -684,7 +698,7 @@
                 keyLesson: "The power of observation and stillness",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-24.jpg" alt="Aizawl" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-24.jpg" alt="Aizawl" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">Stillness</div>
                     </div>
@@ -705,7 +719,7 @@
                 keyLesson: "Trusting instinct over maps",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-25.jpg" alt="Mountain Sunrise" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-25.jpg" alt="Mountain Sunrise" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Chase</div>
                     </div>
@@ -726,7 +740,7 @@
                 keyLesson: "Information from locals is better than a map",
                 fullText: `
                     <div class="mb-8 rounded-xl overflow-hidden shadow-md relative group">
-                        <img src="images/chapter-26.jpg" alt="Aizawl to Silchar" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.parentElement.style.display='none'">
+                        <img src="images/chapter-26.jpg" alt="Aizawl to Silchar" class="w-full h-48 md:h-64 object-cover object-center transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/800x400/e7e5e4/a8a29e?text=Chapter+Image+Pending'">
                         <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent"></div>
                         <div class="absolute bottom-4 left-6 text-stone-100 font-sans text-xs tracking-widest uppercase">The Detour</div>
                     </div>
@@ -868,5 +882,18 @@
         window.addEventListener('DOMContentLoaded', initApp);
 
     </script>
+
+    <!-- Google Translate Scripts -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,kn', /* English and Kannada only */
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
 </body>
 </html>
