@@ -1,0 +1,4 @@
+<video src="videos/chapter.mp4" autoplay loop muted playsinline class="w-full h-64 sm:h-96 object-cover rounded-xl shadow-md my-8"></video>
+
+<img src="images/chapter.jpg" alt="Kohima Market" class="w-full h-64 sm:h-96 object-cover rounded-xl shadow-md my-8">
+
