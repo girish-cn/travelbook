@@ -171,10 +171,16 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
     </style>
 </head>
 
-<body class="font-serif text-book-ink antialiased flex items-center justify-center min-h-screen py-8 px-4 sm:px-8">
+<!-- <body class="font-serif text-book-ink antialiased flex items-center justify-center min-h-screen py-8 px-4 sm:px-8"> -->
+    <body class="font-serif text-book-ink antialiased flex items-center justify-center h-screen overflow-hidden px-4 sm:px-8"></body>
 
     <audio id="bg-music" src="background-music.mp3" loop></audio>
     <button id="music-btn" onclick="toggleMusic()"
